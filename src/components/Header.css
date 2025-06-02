@@ -48,7 +48,7 @@
   font-weight: bold;
 }
 
-/* ✅ 모바일 대응 */
+/* 모바일 대응 */
 @media (max-width: 768px) {
   .header {
     flex-direction: column;

@@ -97,7 +97,7 @@
   background-color: #044a91;
 }
 
-/* ✅ 반응형: 모바일에서 세로 배치 */
+/* 반응형: 모바일에서 세로 배치 */
 @media (max-width: 768px) {
   .login-page {
     flex-direction: column;
