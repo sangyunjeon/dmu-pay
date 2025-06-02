@@ -1,3 +1,4 @@
+/* 기본 설정 */
 .login-page {
   display: flex;
   height: 100vh;
@@ -5,7 +6,7 @@
   font-size: 20px;
 }
 
-/* 왼쪽 소개 */
+/* 왼쪽 소개 영역 */
 .login-left {
   flex: 1;
   background-color: #f5f7fa;
@@ -35,7 +36,7 @@
   line-height: 1.9;
 }
 
-/* 오른쪽 로그인 */
+/* 오른쪽 로그인 영역 */
 .login-right {
   flex: 1;
   background-color: white;
@@ -49,6 +50,7 @@
   max-width: 350px;
   margin: 0 auto;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .form-title {
@@ -97,11 +99,12 @@
   background-color: #044a91;
 }
 
-/* 반응형: 모바일에서 세로 배치 */
+/* 반응형: 모바일 및 태블릿 대응 */
 @media (max-width: 768px) {
   .login-page {
     flex-direction: column;
     font-size: 16px;
+    align-items: center;
   }
 
   .login-left,
@@ -109,6 +112,7 @@
     flex: none;
     width: 100%;
     padding: 30px;
+    box-sizing: border-box;
   }
 
   .title {
@@ -125,5 +129,19 @@
 
   .form-title {
     font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .login-form {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  .input-box input,
+  .login-btn {
+    width: 100%;
   }
 }
