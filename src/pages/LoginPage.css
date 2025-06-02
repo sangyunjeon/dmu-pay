@@ -1,0 +1,101 @@
+.login-page {
+  display: flex;
+  height: 100vh;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 20px;
+  /* 전체 폰트 크기 확대 */
+}
+
+/* 왼쪽 소개 영역 */
+.login-left {
+  flex: 1;
+  background-color: #f5f7fa;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 30px;
+  /* 오른쪽보다 1.5배 크게 */
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #055db4;
+}
+
+.subtitle {
+  font-size: 2rem;
+  margin-top: 1.2rem;
+  color: #1f2937;
+}
+
+.desc {
+  font-size: 1.6rem;
+  margin-top: 1.5rem;
+  color: #374151;
+  line-height: 1.9;
+  white-space: pre-line;
+}
+
+/* 오른쪽 로그인 폼 영역 */
+.login-right {
+  flex: 1;
+  background-color: white;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-form {
+  max-width: 350px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.form-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  color: #1e293b;
+}
+
+.input-box {
+  margin-bottom: 1.5rem;
+}
+
+.input-box input,
+.login-btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 1.2rem;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.input-box input {
+  border: 1px solid #cbd5e1;
+  background-color: #f9fafb;
+  color: #111827;
+}
+
+.input-box input:focus {
+  border-color: #055db4;
+  outline: none;
+  background-color: #fff;
+}
+
+.login-btn {
+  background-color: #055db4;
+  color: white;
+  font-weight: bold;
+  border: none;
+  margin-top: 10px;
+  transition: background-color 0.2s ease;
+}
+
+.login-btn:hover {
+  background-color: #044a91;
+}
