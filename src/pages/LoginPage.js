@@ -1,10 +1,11 @@
-// src/pages/LoginPage.js
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./LoginPage.css";
 
 function LoginPage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -15,26 +16,37 @@ function LoginPage() {
     }
 
     try {
-      const response = await fetch(
-        "http://localhost/dmu-pay-server/login.php",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
-          },
-          body: `username=${encodeURIComponent(
-            username
-          )}&password=${encodeURIComponent(password)}`,
-        }
-      );
+      const response = await fetch("http://localhost/dmu-pay-server/login.php", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+        },
+        body: `username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`,
+      });
 
       const data = await response.json();
+
       if (data.success) {
         alert("로그인 성공!");
+
+        switch (data.role) {
+          case 'student':
+            navigate("/student");
+            break;
+          case 'merchant':
+            navigate("/merchant");
+            break;
+          case 'admin':
+            navigate("/admin");
+            break;
+          default:
+            alert("정의되지 않은 역할입니다.");
+        }
       } else {
         alert(data.message);
       }
     } catch (error) {
+      console.error("에러:", error);
       alert("서버와 통신 중 오류가 발생했습니다.");
     }
   };
