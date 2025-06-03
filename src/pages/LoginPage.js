@@ -62,7 +62,7 @@ function LoginPage() {
         <h1 className="title">DMU-Pay</h1>
         <p className="subtitle">당신의 노력, 포인트로 돌려받자!</p>
         <p className="desc">
-          DMU-Pay는 대학생들의 노력을
+          DMU-Pay는 동양미래대 학생들의 노력을
           <br />
           포인트로 보상해주어 학생들의 자기개발을 독려하는 시스템입니다.
           <br />

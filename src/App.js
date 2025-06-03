@@ -10,7 +10,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<LoginPage />} />
-        <Route path="/signup" element={<SignUpPage />} /> {/* ⬅️ 회원가입 경로 추가 */}
+        <Route path="/signup" element={<SignUpPage />} /> {/* <- 회원가입 경로 추가 */}
         <Route path="/student" element={<StudentMainPage />} />
         <Route path="/merchant" element={<MerchantMainPage />} />
         <Route path="/admin" element={<AdminMainPage />} />
