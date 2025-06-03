@@ -101,3 +101,71 @@ body {
 .signup-btn {
   background-color: #055db4;
 }
+
+/* 반응형 처리 - 태블릿 이하 */
+@media (max-width: 768px) {
+  .login-page {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .login-left,
+  .login-right {
+    flex: none;
+    width: 100%;
+    padding: 40px 20px;
+    box-sizing: border-box;
+  }
+
+  .title {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .desc {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .login-form {
+    max-width: 100%;
+  }
+}
+
+/* 반응형 처리 - 스마트폰 */
+@media (max-width: 480px) {
+  .login-left,
+  .login-right {
+    padding: 30px 15px;
+    font-size: 18px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .desc {
+    font-size: 1rem;
+  }
+
+  .input-box input,
+  .input-box select {
+    font-size: 16px;
+    height: 40px;
+  }
+
+  .login-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
