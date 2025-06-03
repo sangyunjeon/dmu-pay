@@ -16,13 +16,18 @@ function LoginPage() {
     }
 
     try {
-      const response = await fetch("http://localhost/dmu-pay-server/login.php", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
-        },
-        body: `username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`,
-      });
+      const response = await fetch(
+        "http://localhost/dmu-pay-server/login.php",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+          },
+          body: `username=${encodeURIComponent(
+            username
+          )}&password=${encodeURIComponent(password)}`,
+        }
+      );
 
       const data = await response.json();
 
@@ -30,13 +35,13 @@ function LoginPage() {
         alert("로그인 성공!");
 
         switch (data.role) {
-          case 'student':
+          case "student":
             navigate("/student");
             break;
-          case 'merchant':
+          case "merchant":
             navigate("/merchant");
             break;
-          case 'admin':
+          case "admin":
             navigate("/admin");
             break;
           default:
@@ -89,6 +94,13 @@ function LoginPage() {
 
           <button className="login-btn" type="submit">
             로그인
+          </button>
+          <button
+            className="login-btn signup-btn"
+            type="button"
+            onClick={() => navigate("/signup")}
+          >
+            회원가입(학생)
           </button>
         </form>
       </div>

@@ -1,12 +1,15 @@
-/* 기본 설정 */
+body {
+  background-color: #ececec;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
 .login-page {
   display: flex;
   height: 100vh;
-  font-family: 'Noto Sans KR', sans-serif;
   font-size: 20px;
 }
 
-/* 왼쪽 소개 영역 */
+/* 왼쪽 소개 */
 .login-left {
   flex: 1;
   background-color: #f5f7fa;
@@ -20,7 +23,7 @@
 .title {
   font-size: 4rem;
   font-weight: bold;
-  color: #055db4;
+  color:  #055db4;
 }
 
 .subtitle {
@@ -36,7 +39,7 @@
   line-height: 1.9;
 }
 
-/* 오른쪽 로그인 영역 */
+/* 오른쪽 로그인 */
 .login-right {
   flex: 1;
   background-color: white;
@@ -47,101 +50,54 @@
 }
 
 .login-form {
-  max-width: 350px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  box-sizing: border-box;
-}
-
-.form-title {
-  font-size: 2.2rem;
-  font-weight: bold;
-  margin-bottom: 2.5rem;
-  text-align: center;
-  color: #1e293b;
+  max-width: 320px;
+  margin: 0 auto;
 }
 
 .input-box {
-  margin-bottom: 1.5rem;
+  margin-bottom: 15px;
 }
 
 .input-box input,
-.login-btn {
+.input-box select {
   width: 100%;
-  padding: 14px;
-  font-size: 1.2rem;
+  padding: 10px;
+  font-size: 18px;
+  border: 1px solid #ccc;
   border-radius: 6px;
   box-sizing: border-box;
-}
-
-.input-box input {
-  border: 1px solid #cbd5e1;
-  background-color: #f9fafb;
-  color: #111827;
-}
-
-.input-box input:focus {
-  border-color: #055db4;
+  height: 45px;
   outline: none;
-  background-color: #fff;
+}
+
+/* 드롭다운 전공 선택 스타일 */
+.input-box select:invalid {
+  color: #888;
+}
+
+.input-box select option {
+  color: #000;
+}
+
+.input-box select option[value=""] {
+  color: #888;
 }
 
 .login-btn {
+  padding: 12px;
+  margin-top: 10px;
   background-color: #055db4;
   color: white;
   font-weight: bold;
   border: none;
-  margin-top: 10px;
-  transition: background-color 0.2s ease;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 6px;
 }
 
-.login-btn:hover {
-  background-color: #044a91;
-}
-
-/* 반응형: 모바일 및 태블릿 대응 */
-@media (max-width: 768px) {
-  .login-page {
-    flex-direction: column;
-    font-size: 16px;
-    align-items: center;
-  }
-
-  .login-left,
-  .login-right {
-    flex: none;
-    width: 100%;
-    padding: 30px;
-    box-sizing: border-box;
-  }
-
-  .title {
-    font-size: 2.5rem;
-  }
-
-  .subtitle {
-    font-size: 1.5rem;
-  }
-
-  .desc {
-    font-size: 1.1rem;
-  }
-
-  .form-title {
-    font-size: 1.5rem;
-    text-align: center;
-  }
-
-  .login-form {
-    width: 100%;
-    max-width: 100%;
-    padding: 0 20px;
-    margin: 0 auto;
-    box-sizing: border-box;
-  }
-
-  .input-box input,
-  .login-btn {
-    width: 100%;
-  }
+.signup-btn {
+  background-color: #055db4;
 }
