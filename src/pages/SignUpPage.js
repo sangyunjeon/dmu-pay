@@ -25,6 +25,11 @@ function SignUpPage() {
       return;
     }
 
+    if (password.length < 10 || password.length > 16) {
+      alert("비밀번호는 10자 이상 16자 이하로 입력해주세요.");
+      return;
+    }
+
     try {
       const response = await fetch("http://localhost/dmu-pay-server/signup.php", {
         method: "POST",
@@ -43,14 +48,13 @@ function SignUpPage() {
       const data = await response.json();
 
       if (data.success) {
-        alert("회원가입 성공! 로그인 페이지로 이동합니다.");
+        alert("회원가입 성공!");
         navigate("/");
       } else {
-        alert(data.message);
+        alert(data.message); // 서버에서 전달한 에러 메시지 출력
       }
-    } catch (error) {
-      console.error("에러 발생:", error);
-      alert("서버와 통신 중 오류가 발생했습니다.");
+    } catch (err) {
+      alert("네트워크 또는 서버 오류: " + err.message);
     }
   };
 
@@ -60,7 +64,7 @@ function SignUpPage() {
         <h1 className="title">DMU-Pay</h1>
         <p className="subtitle">당신의 노력, 포인트로 돌려받자!</p>
         <p className="desc">
-          DMU-Pay는 동양미래대 학생들의 노력을
+          DMU-Pay는 대학생들의 노력을
           <br />
           포인트로 보상해주어 학생들의 자기개발을 독려하는 시스템입니다.
           <br />
@@ -92,9 +96,7 @@ function SignUpPage() {
 
           <div className="input-box">
             <select value={major} onChange={(e) => setMajor(e.target.value)} required>
-              <option value="" disabled hidden>
-                전공 선택
-              </option>
+              <option value="" disabled hidden>전공 선택</option>
               <option value="컴퓨터정보공학과">컴퓨터정보공학과</option>
               <option value="기계공학과">기계공학과</option>
               <option value="전기전자공학과">전기전자공학과</option>
@@ -116,9 +118,11 @@ function SignUpPage() {
           <div className="input-box">
             <input
               type="password"
-              placeholder="비밀번호"
+              placeholder="비밀번호 (10~16자)"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              minLength={10}
+              maxLength={16}
             />
           </div>
 
@@ -128,12 +132,12 @@ function SignUpPage() {
               placeholder="비밀번호 확인"
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
+              minLength={10}
+              maxLength={16}
             />
           </div>
 
-          <button className="login-btn" type="submit">
-            회원가입
-          </button>
+          <button className="login-btn" type="submit">회원가입</button>
 
           <button
             className="login-btn signup-btn"
