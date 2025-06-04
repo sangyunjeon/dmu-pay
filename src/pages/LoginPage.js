@@ -17,7 +17,7 @@ function LoginPage() {
 
     try {
       const response = await fetch(
-        "http://dmupay01.dothome.co.kr/login.php",
+        "https://dmupay01.dothome.co.kr/login.php",
         {
           method: "POST",
           headers: {

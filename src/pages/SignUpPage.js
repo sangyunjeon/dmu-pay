@@ -31,7 +31,7 @@ function SignUpPage() {
     }
 
     try {
-      const response = await fetch("http://dmupay01.dothome.co.kr/signup.php", {
+      const response = await fetch("https://dmupay01.dothome.co.kr/signup.php", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
