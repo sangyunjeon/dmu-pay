@@ -5,6 +5,74 @@
   min-height: calc(100vh - 80px);
 }
 
+/* 그리드 레이아웃 */
+.main-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* 공통 카드 스타일 */
+.card {
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* 학생 정보 카드 */
+.student-info {
+  grid-column: 1 / 2;
+}
+
+/* 결제하기 박스 */
+.payment-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  grid-column: 2 / 3;
+}
+
+/* 최근 활동 내역 */
+.activity-log h4 {
+  margin-bottom: 10px;
+}
+.activity-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  font-size: 0.95rem;
+}
+.activity-item .point.plus {
+  color: green;
+}
+.activity-item .point.minus {
+  color: red;
+}
+
+/* 가맹점 안내 */
+.store-guide p {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+}
+.store-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #055db4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* 여유 박스 (추후 활용 가능) */
+.extra-box {
+  min-height: 100px;
+}
+
 /* 모바일 대응 */
 @media (max-width: 768px) {
   .student-main {
@@ -17,5 +85,17 @@
 
   .student-main p {
     font-size: 1rem;
+  }
+
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .student-info,
+  .payment-box,
+  .activity-log,
+  .store-guide,
+  .extra-box {
+    grid-column: 1 / -1;
   }
 }

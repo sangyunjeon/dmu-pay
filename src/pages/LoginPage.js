@@ -17,7 +17,7 @@ function LoginPage() {
 
     try {
       const response = await fetch(
-        "http://localhost/dmu-pay-server/login.php",
+        "http://dmupay01.dothome.co.kr/login.php", // ✅ 닷홈 주소로 수정
         {
           method: "POST",
           headers: {

@@ -1,0 +1,72 @@
+.mypage-container {
+  padding: 40px;
+  background-color: #f8fafc;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.user-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.user-left {
+  display: flex;
+  align-items: center;
+}
+
+.profile-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.user-info {
+  font-size: 1rem;
+}
+
+.user-name {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.user-right {
+  text-align: right;
+  font-size: 1rem;
+}
+
+.user-right .point {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.chart-section {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .user-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .user-right {
+    text-align: left;
+  }
+
+  .mypage-container {
+    padding: 20px;
+  }
+}
