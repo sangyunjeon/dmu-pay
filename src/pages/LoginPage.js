@@ -16,12 +16,17 @@ function LoginPage() {
     }
 
     try {
+      // ✅ 올바른 URL 인코딩 방식
+      const params = new URLSearchParams();
+      params.append("username", username);
+      params.append("password", password);
+
       const response = await fetch("/.netlify/functions/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
         },
-        body: `username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`
+        body: params.toString(), // ✅ 안전한 방식으로 인코딩된 파라미터
       });
 
       const data = await response.json();
