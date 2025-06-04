@@ -14,7 +14,7 @@ exports.handler = async (event, context) => {
   const password = params.get("password");
 
   try {
-    const response = await fetch("https://dmupay01.dothome.co.kr/login.php", {
+    const response = await fetch("http://dmupay01.dothome.co.kr/login.php", {
       method: "POST",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
