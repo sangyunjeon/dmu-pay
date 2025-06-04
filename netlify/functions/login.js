@@ -9,33 +9,29 @@ exports.handler = async (event, context) => {
   }
 
   try {
-    const body = JSON.parse(event.body);
-    const username = body.username;
-    const password = body.password;
-
-    const params = new URLSearchParams();
-    params.append("username", username);
-    params.append("password", password);
+    const params = new URLSearchParams(event.body); // ✅ form-urlencoded 파싱
+    const username = params.get("username");
+    const password = params.get("password");
 
     const response = await fetch("http://dmupay01.dothome.co.kr/login.php", {
       method: "POST",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
       },
-      body: params.toString(),
+      body: params.toString(), // ✅ 그대로 다시 전달
     });
 
-    const result = await response.json(); // 🔥 text() → json() 변경
+    const result = await response.json(); // ✅ PHP가 JSON 반환하므로 json() 사용
 
     return {
       statusCode: 200,
-      body: JSON.stringify(result), // 🔥 JSON.stringify로 감싸줌
+      body: JSON.stringify(result),
       headers: {
         "Content-Type": "application/json",
       },
     };
   } catch (err) {
-    console.error("서버 오류:", err);
+    console.error("Netlify 함수 오류:", err);
     return {
       statusCode: 500,
       body: JSON.stringify({ success: false, message: "서버 오류: " + err.message }),
