@@ -17,7 +17,7 @@ function LoginPage() {
 
     try {
       const response = await fetch(
-        "http://dmupay01.dothome.co.kr/login.php", // ✅ 닷홈 주소로 수정
+        "http://dmupay01.dothome.co.kr/login.php",
         {
           method: "POST",
           headers: {
@@ -26,6 +26,7 @@ function LoginPage() {
           body: `username=${encodeURIComponent(
             username
           )}&password=${encodeURIComponent(password)}`,
+          credentials: "include", // ✅ 중요: 세션 유지를 위한 설정
         }
       );
 

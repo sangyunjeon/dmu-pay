@@ -31,7 +31,7 @@ function SignUpPage() {
     }
 
     try {
-      const response = await fetch("http://localhost/dmu-pay-server/signup.php", {
+      const response = await fetch("http://dmupay01.dothome.co.kr/signup.php", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -43,6 +43,7 @@ function SignUpPage() {
           username,
           password,
         }),
+        credentials: "include", // ✅ Netlify에서 세션 유지용으로 꼭 필요
       });
 
       const data = await response.json();
