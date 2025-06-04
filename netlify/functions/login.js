@@ -9,7 +9,7 @@ exports.handler = async (event, context) => {
   }
 
   try {
-    const body = JSON.parse(event.body); // 문자열을 먼저 파싱해야 함
+    const body = JSON.parse(event.body);
     const username = body.username;
     const password = body.password;
 
@@ -22,20 +22,20 @@ exports.handler = async (event, context) => {
       headers: {
         "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
       },
-      body: params.toString(), // 바르게 인코딩된 body
+      body: params.toString(),
     });
 
-    const result = await response.text(); // HTML 또는 JSON 응답 가능
+    const result = await response.json(); // 🔥 text() → json() 변경
 
     return {
       statusCode: 200,
-      body: result,
+      body: JSON.stringify(result), // 🔥 JSON.stringify로 감싸줌
       headers: {
         "Content-Type": "application/json",
       },
     };
   } catch (err) {
-    console.error("서버 오류:", err); // Netlify 함수 로그에서 확인 가능
+    console.error("서버 오류:", err);
     return {
       statusCode: 500,
       body: JSON.stringify({ success: false, message: "서버 오류: " + err.message }),
