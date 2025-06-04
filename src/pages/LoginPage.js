@@ -16,19 +16,13 @@ function LoginPage() {
     }
 
     try {
-      const response = await fetch(
-        "https://dmupay01.dothome.co.kr/login.php",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
-          },
-          body: `username=${encodeURIComponent(
-            username
-          )}&password=${encodeURIComponent(password)}`,
-          credentials: "include", // ✅ 중요: 세션 유지를 위한 설정
-        }
-      );
+      const response = await fetch("/.netlify/functions/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+        },
+        body: `username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`
+      });
 
       const data = await response.json();
 

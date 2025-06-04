@@ -31,7 +31,7 @@ function SignUpPage() {
     }
 
     try {
-      const response = await fetch("https://dmupay01.dothome.co.kr/signup.php", {
+      const response = await fetch("/.netlify/functions/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -43,7 +43,6 @@ function SignUpPage() {
           username,
           password,
         }),
-        credentials: "include", // ✅ Netlify에서 세션 유지용으로 꼭 필요
       });
 
       const data = await response.json();
@@ -52,10 +51,10 @@ function SignUpPage() {
         alert("회원가입 성공!");
         navigate("/");
       } else {
-        alert(data.message); // 서버에서 전달한 에러 메시지 출력
+        alert(data.message);
       }
     } catch (err) {
-      alert("네트워크 또는 서버 오류: " + err.message);
+      alert("서버 오류 또는 네트워크 문제: " + err.message);
     }
   };
 
