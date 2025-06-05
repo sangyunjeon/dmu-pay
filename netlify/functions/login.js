@@ -22,7 +22,7 @@ exports.handler = async (event, context) => {
     });
 
     const raw = await response.text();
-    console.log("PHP 응답 원문:", raw); // 🔍 Netlify Functions 로그에서 확인
+    console.log("PHP 응답 원문:", raw); // Netlify Functions 로그에서 확인
 
     let result;
     try {
