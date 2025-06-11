@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React from "react";
 import "../components/AdminHeader.css";
 import AdminHeader from "../components/AdminHeader";
 import "./AdminMainPage.css";
@@ -10,28 +9,30 @@ import {
   BarChart, Bar, ResponsiveContainer
 } from "recharts";
 
-const pointData = [ /* 생략 */ ];
-const pieData = [ /* 생략 */ ];
+const pointData = [ 
+  { month: "1월", value: 400 },
+  { month: "2월", value: 300 },
+  { month: "3월", value: 500 },
+  { month: "4월", value: 200 }
+];
+
+const pieData = [
+  { name: "참여", value: 300 },
+  { name: "봉사", value: 200 },
+  { name: "자격증", value: 100 },
+  { name: "기타", value: 50 }
+];
+
 const pieColors = [ "#0074cc", "#f27052", "#00b894", "#636e72" ];
-const usageData = [ /* 생략 */ ];
+
+const usageData = [
+  { name: "가맹점 A", value: 240 },
+  { name: "가맹점 B", value: 130 },
+  { name: "가맹점 C", value: 310 },
+  { name: "가맹점 D", value: 180 }
+];
 
 function AdminMainPage() {
-  const navigate = useNavigate();
-  const [isAuthChecked, setIsAuthChecked] = useState(false);
-
-  useEffect(() => {
-    const isAdmin = sessionStorage.getItem("admin");
-
-    if (!isAdmin) {
-      alert("로그인이 필요합니다.");
-      navigate("/login");
-    } else {
-      setIsAuthChecked(true); // 로그인 인증 통과
-    }
-  }, [navigate]);
-
-  if (!isAuthChecked) return null; // 인증 확인되기 전엔 아무것도 렌더링하지 않음
-
   return (
     <div className="admin-page">
       <AdminHeader />
