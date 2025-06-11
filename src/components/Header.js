@@ -7,9 +7,8 @@ function Header() {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    sessionStorage.clear(); 
     alert("로그아웃 되었습니다.");
-    navigate("/login");
+    navigate("/");
   };
 
   return (
