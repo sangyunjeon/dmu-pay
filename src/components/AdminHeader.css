@@ -47,3 +47,17 @@
 .admin-header-nav a:hover {
   color: #055db4;
 }
+
+
+.logout-button {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: #1f2937;
+  cursor: pointer;
+  padding: 8px 12px;
+}
+
+.logout-button:hover {
+  color: #055db4;
+}

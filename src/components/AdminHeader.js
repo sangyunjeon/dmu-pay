@@ -1,26 +1,26 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./AdminHeader.css";
 
 function AdminHeader() {
+  const navigate = useNavigate();
+
   const handleLogout = () => {
-    sessionStorage.clear();
+    sessionStorage.clear();                  // 상태 제거
     alert("로그아웃 되었습니다.");
-    window.location.href = "/"; // ✅ "/"로 이동하면 LoginPage로 연결됨
+    navigate("/login");                      // navigate로 이동 (학생과 동일)
   };
 
   return (
     <header className="admin-header">
       <div className="admin-header-left">
         <img src="/logo.png" alt="로고" className="admin-logo" />
-        <span className="admin-title">DMU-Pay Admin</span>
+        <span className="admin-title">DMU-Pay 관리자</span>
       </div>
       <nav className="admin-header-nav">
-        <a href="#logout" onClick={(e) => {
-          e.preventDefault();
-          handleLogout();
-        }}>
+        <button onClick={handleLogout} className="logout-button">
           로그아웃
-        </a>
+        </button>
       </nav>
     </header>
   );
