@@ -1,13 +1,14 @@
+// src/components/AdminHeader.js
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./AdminHeader.css";
 
 function AdminHeader() {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    // 세션이나 로컬스토리지 정리
-    sessionStorage.clear(); // 예시
+    console.log("로그아웃 시도 중");  // 콘솔 확인용
+    sessionStorage.clear(); // 프론트 세션 제거
     navigate("/login");     // 로그인 페이지로 이동
   };
 
@@ -18,8 +19,6 @@ function AdminHeader() {
         <span className="admin-title">DMU-Pay 관리자</span>
       </div>
       <nav className="admin-header-nav">
-        <Link to="/admin/dashboard">대시보드</Link>
-        <Link to="/admin/users">회원관리</Link>
         <a href="#logout" onClick={(e) => { e.preventDefault(); handleLogout(); }}>
           로그아웃
         </a>

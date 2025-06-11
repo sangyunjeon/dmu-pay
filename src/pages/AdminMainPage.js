@@ -20,13 +20,13 @@ import {
 } from "recharts";
 
 const pointData = [
-  { month: "1월", value: 300000 },
-  { month: "2월", value: 350000 },
+  { month: "1월", value: 30000 },
+  { month: "2월", value: 35000 },
   { month: "3월", value: 150000 },
   { month: "4월", value: 170000 },
-  { month: "5월", value: 160000 },
+  { month: "5월", value: 16000 },
   { month: "6월", value: 370000 },
-  { month: "7월", value: 330000 },
+  { month: "7월", value: 33000 },
   { month: "8월", value: 180000 },
   { month: "9월", value: 150000 },
   { month: "10월", value: 160000 },
@@ -43,11 +43,11 @@ const pieData = [
 const pieColors = ["#0074cc", "#f27052", "#00b894", "#636e72"];
 
 const usageData = [
-  { name: "가맹점A", value: 3200000 },
-  { name: "가맹점B", value: 2800000 },
-  { name: "가맹점C", value: 2100000 },
-  { name: "가맹점D", value: 1200000 },
-  { name: "가맹점E", value: 900000 }
+  { name: "가맹점A", value: 320000 },
+  { name: "가맹점B", value: 280000 },
+  { name: "가맹점C", value: 210000 },
+  { name: "가맹점D", value: 120000 },
+  { name: "가맹점E", value: 90000 }
 ];
 
 function AdminMainPage() {
@@ -97,7 +97,7 @@ function AdminMainPage() {
             </div>
 
             <div className="bar-chart">
-              <h3>월별사용량</h3>
+              <h3>이번 달 가맹점 수입</h3>
               <ResponsiveContainer width="100%" height={250}>
                 <BarChart data={usageData}>
                   <CartesianGrid strokeDasharray="3 3" />
