@@ -1,7 +1,7 @@
 import React from "react";
 import "./AdminMainPage.css";
 import Header from "../components/Header";
-import logo from "../assets/logo.png"; // 기존 logo 위치로 경로 조정 필요
+
 import {
   LineChart,
   Line,
@@ -53,7 +53,7 @@ function AdminMainPage() {
   return (
     <div className="admin-page">
       <div className="sidebar">
-        <img src={logo} alt="logo" className="logo" />
+        <img src="/logo.png" alt="logo" className="logo"/>
         <ul>
           <li>학생관리</li>
           <li>가맹점관리</li>
