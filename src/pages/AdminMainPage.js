@@ -24,7 +24,7 @@ function AdminMainPage() {
       alert("로그인이 필요합니다.");
       navigate("/login");
     }
-  }, [navigate]); // ✅ 수정: navigate를 의존성 배열에 추가
+  }, [navigate]);
 
   return (
     <div className="admin-page">
