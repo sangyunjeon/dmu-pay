@@ -1,6 +1,5 @@
 import React from "react";
 import "./AdminMainPage.css";
-
 import {
   LineChart,
   Line,
@@ -51,64 +50,65 @@ const usageData = [
 function AdminMainPage() {
   return (
     <div className="admin-page">
-      <div className="sidebar">
+      <div className="top-header">
         <img src="/logo.png" alt="logo" className="logo" />
-        <ul>
-          <li>학생관리</li>
-          <li>가맹점관리</li>
-        </ul>
+        <div>Admin 000님 | 로그아웃</div>
       </div>
 
-      <div className="main-content">
-        <div className="top-bar">
-          <div></div>
-          <div>Admin 000님 | 로그아웃</div>
+      <div className="main-body">
+        <div className="sidebar">
+          <ul>
+            <li>학생관리</li>
+            <li>가맹점관리</li>
+          </ul>
         </div>
 
-        <h2 className="title">포인트 지급</h2>
-        <ResponsiveContainer width="100%" height={250}>
-          <LineChart data={pointData}>
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="month" />
-            <YAxis />
-            <Tooltip />
-            <Legend />
-            <Line type="monotone" dataKey="value" stroke="#0074cc" name="포인트 지급" />
-          </LineChart>
-        </ResponsiveContainer>
-
-        <div className="chart-section">
-          <div className="pie-chart">
-            <h3>지급 종류</h3>
-            <PieChart width={300} height={300}>
-              <Pie
-                data={pieData}
-                cx="50%"
-                cy="50%"
-                outerRadius={100}
-                dataKey="value"
-                label
-              >
-                {pieData.map((entry, index) => (
-                  <Cell key={`cell-${index}`} fill={pieColors[index % pieColors.length]} />
-                ))}
-              </Pie>
+        <div className="main-content">
+          <h2 className="title">포인트 지급</h2>
+          <ResponsiveContainer width="100%" height={250}>
+            <LineChart data={pointData}>
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="month" />
+              <YAxis />
+              <Tooltip />
               <Legend />
-            </PieChart>
-          </div>
+              <Line type="monotone" dataKey="value" stroke="#0074cc" name="포인트 지급" />
+            </LineChart>
+          </ResponsiveContainer>
 
-          <div className="bar-chart">
-            <h3>월별사용량</h3>
-            <ResponsiveContainer width="100%" height={250}>
-              <BarChart data={usageData}>
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="name" />
-                <YAxis />
-                <Tooltip />
+          <div className="chart-section">
+            <div className="pie-chart">
+              <h3>지급 종류</h3>
+              <PieChart width={300} height={300}>
+                <Pie
+                  data={pieData}
+                  cx="50%"
+                  cy="50%"
+                  outerRadius={100}
+                  dataKey="value"
+                  label
+                >
+                  {pieData.map((entry, index) => (
+                    <Cell key={`cell-${index}`} fill={pieColors[index % pieColors.length]} />
+                  ))}
+                </Pie>
                 <Legend />
-                <Bar dataKey="value" fill="#0074cc" name="월별사용량" />
-              </BarChart>
-            </ResponsiveContainer>
+              </PieChart>
+            </div>
+
+            <div className="bar-chart">
+              <h3>월별사용량</h3>
+              <ResponsiveContainer width="100%" height={250}>
+                <BarChart data={usageData}>
+                  <CartesianGrid strokeDasharray="3 3" />
+                  <XAxis dataKey="name" />
+                  <YAxis />
+                  <Tooltip />
+                  <Legend />
+                  <Bar dataKey="value" fill="#0074cc" name="월별사용량" />
+                </BarChart>
+              </ResponsiveContainer>
+            </div>
           </div>
         </div>
       </div>
