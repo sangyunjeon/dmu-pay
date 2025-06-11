@@ -13,7 +13,10 @@ const pointData = [
   { month: "1월", value: 202500 },
   { month: "2월", value: 305000 },
   { month: "3월", value: 412000 },
-  { month: "4월", value: 263000 }
+  { month: "4월", value: 263000 },
+  { month: "5월", value: 364500 },
+  { month: "6월", value: 124000 },
+  { month: "7월", value: 241200 }
 ];
 
 const pieData = [
