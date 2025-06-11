@@ -10,26 +10,26 @@ import {
 } from "recharts";
 
 const pointData = [ 
-  { month: "1월", value: 400 },
-  { month: "2월", value: 300 },
-  { month: "3월", value: 500 },
-  { month: "4월", value: 200 }
+  { month: "1월", value: 202500 },
+  { month: "2월", value: 305000 },
+  { month: "3월", value: 412000 },
+  { month: "4월", value: 263000 }
 ];
 
 const pieData = [
-  { name: "참여", value: 300 },
-  { name: "봉사", value: 200 },
-  { name: "자격증", value: 100 },
-  { name: "기타", value: 50 }
+  { name: "참여", value: 50 },
+  { name: "봉사", value: 25 },
+  { name: "자격증", value: 15 },
+  { name: "기타", value: 10 }
 ];
 
 const pieColors = [ "#0074cc", "#f27052", "#00b894", "#636e72" ];
 
 const usageData = [
-  { name: "가맹점 A", value: 240 },
-  { name: "가맹점 B", value: 130 },
-  { name: "가맹점 C", value: 310 },
-  { name: "가맹점 D", value: 180 }
+  { name: "가맹점 A", value: 200400 },
+  { name: "가맹점 B", value: 312000 },
+  { name: "가맹점 C", value: 176000 },
+  { name: "가맹점 D", value: 99200 }
 ];
 
 function AdminMainPage() {
