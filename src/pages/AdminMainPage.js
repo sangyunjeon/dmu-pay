@@ -1,5 +1,8 @@
 import React from "react";
+import "../components/AdminHeader.css";
+import AdminHeader from "../components/AdminHeader";
 import "./AdminMainPage.css";
+
 import {
   LineChart,
   Line,
@@ -50,10 +53,7 @@ const usageData = [
 function AdminMainPage() {
   return (
     <div className="admin-page">
-      <div className="top-header">
-        <img src="/logo.png" alt="logo" className="logo" />
-        <div>Admin 000님 | 로그아웃</div>
-      </div>
+      <AdminHeader />
 
       <div className="main-body">
         <div className="sidebar">
