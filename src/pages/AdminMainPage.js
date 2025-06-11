@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../components/AdminHeader.css";
 import AdminHeader from "../components/AdminHeader";
@@ -17,14 +17,20 @@ const usageData = [ /* 생략 */ ];
 
 function AdminMainPage() {
   const navigate = useNavigate();
+  const [isAuthChecked, setIsAuthChecked] = useState(false);
 
   useEffect(() => {
     const isAdmin = sessionStorage.getItem("admin");
+
     if (!isAdmin) {
       alert("로그인이 필요합니다.");
       navigate("/login");
+    } else {
+      setIsAuthChecked(true); // 로그인 인증 통과
     }
   }, [navigate]);
+
+  if (!isAuthChecked) return null; // 인증 확인되기 전엔 아무것도 렌더링하지 않음
 
   return (
     <div className="admin-page">
