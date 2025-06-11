@@ -5,7 +5,7 @@ function AdminHeader() {
   const handleLogout = () => {
     sessionStorage.clear();                        // 상태 제거
     alert("로그아웃 되었습니다.");
-    window.location.href = "https://dmu-pay.netlify.app/"; // ✅ 배포 주소로 이동
+    window.location.href = "https://www.naver.com/"; // ✅ 배포 주소로 이동
   };
 
   return (
