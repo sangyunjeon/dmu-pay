@@ -16,7 +16,6 @@ function LoginPage() {
     }
 
     try {
-      // 올바른 URL 인코딩 방식
       const params = new URLSearchParams();
       params.append("username", username);
       params.append("password", password);
@@ -26,13 +25,16 @@ function LoginPage() {
         headers: {
           "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
         },
-        body: params.toString(), // 안전한 방식으로 인코딩된 파라미터
+        body: params.toString(),
       });
 
       const data = await response.json();
 
       if (data.success) {
         alert("로그인 성공!");
+
+        // ✅ 관리자/학생/가맹점 역할에 따라 세션 저장
+        sessionStorage.setItem(data.role, "true");
 
         switch (data.role) {
           case "student":
