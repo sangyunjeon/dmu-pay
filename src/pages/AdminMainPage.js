@@ -1,6 +1,5 @@
 import React from "react";
 import "./AdminMainPage.css";
-import Header from "../components/Header";
 
 import {
   LineChart,
@@ -53,7 +52,7 @@ function AdminMainPage() {
   return (
     <div className="admin-page">
       <div className="sidebar">
-        <img src="/logo.png" alt="logo" className="logo"/>
+        <img src="/logo.png" alt="logo" className="logo" />
         <ul>
           <li>학생관리</li>
           <li>가맹점관리</li>
