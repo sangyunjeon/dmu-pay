@@ -7,9 +7,9 @@ function AdminHeader() {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    console.log("로그아웃 시도 중");  // 콘솔 확인용
-    sessionStorage.clear(); // 프론트 세션 제거
-    navigate("/login");     // 로그인 페이지로 이동
+    sessionStorage.clear();                  // 세션 제거
+    alert("로그아웃 되었습니다.");            // 알림 출력
+    navigate("/login");                      // 로그인 페이지로 이동
   };
 
   return (
@@ -19,7 +19,10 @@ function AdminHeader() {
         <span className="admin-title">DMU-Pay 관리자</span>
       </div>
       <nav className="admin-header-nav">
-        <a href="#logout" onClick={(e) => { e.preventDefault(); handleLogout(); }}>
+        <a href="#logout" onClick={(e) => {
+          e.preventDefault();
+          handleLogout();
+        }}>
           로그아웃
         </a>
       </nav>
