@@ -4,38 +4,55 @@ import AdminHeader from "../components/AdminHeader";
 import "./AdminMainPage.css";
 
 import {
-  LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
-  PieChart, Pie, Cell,
-  BarChart, Bar, ResponsiveContainer
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+  PieChart,
+  Pie,
+  Cell,
+  BarChart,
+  Bar,
+  ResponsiveContainer,
 } from "recharts";
 
-const pointData = [ 
+const pointData = [
   { month: "1월", value: 202500 },
   { month: "2월", value: 305000 },
   { month: "3월", value: 412000 },
   { month: "4월", value: 263000 },
   { month: "5월", value: 364500 },
   { month: "6월", value: 124000 },
-  { month: "7월", value: 241200 }
+  { month: "7월", value: 241200 },
 ];
 
 const pieData = [
   { name: "참여", value: 50 },
   { name: "봉사", value: 25 },
   { name: "자격증", value: 15 },
-  { name: "기타", value: 10 }
+  { name: "기타", value: 10 },
 ];
 
-const pieColors = [ "#0074cc", "#f27052", "#00b894", "#636e72" ];
+const pieColors = ["#0074cc", "#f27052", "#00b894", "#636e72"];
 
 const usageData = [
   { name: "가맹점 A", value: 200400 },
   { name: "가맹점 B", value: 312000 },
   { name: "가맹점 C", value: 176000 },
-  { name: "가맹점 D", value: 99200 }
+  { name: "가맹점 D", value: 99200 },
 ];
 
 function AdminMainPage() {
+  // ✅ handleLogout 함수 추가
+  const handleLogout = () => {
+    sessionStorage.clear();
+    alert("로그아웃 되었습니다.");
+    window.location.href = "https://dmu-pay.netlify.app/";
+  };
+
   return (
     <div className="admin-page">
       <AdminHeader />
@@ -44,6 +61,11 @@ function AdminMainPage() {
           <ul>
             <li>학생관리</li>
             <li>가맹점관리</li>
+            <li className="mobile-only">
+              <button className="logout-button" onClick={handleLogout}>
+                로그아웃
+              </button>
+            </li>
           </ul>
         </div>
 
@@ -57,7 +79,12 @@ function AdminMainPage() {
               <YAxis />
               <Tooltip />
               <Legend />
-              <Line type="monotone" dataKey="value" stroke="#0074cc" name="포인트 지급" />
+              <Line
+                type="monotone"
+                dataKey="value"
+                stroke="#0074cc"
+                name="포인트 지급"
+              />
             </LineChart>
           </ResponsiveContainer>
 
@@ -65,9 +92,19 @@ function AdminMainPage() {
             <div className="pie-chart">
               <h3>지급 종류</h3>
               <PieChart width={300} height={300}>
-                <Pie data={pieData} cx="50%" cy="50%" outerRadius={100} dataKey="value" label>
+                <Pie
+                  data={pieData}
+                  cx="50%"
+                  cy="50%"
+                  outerRadius={100}
+                  dataKey="value"
+                  label
+                >
                   {pieData.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={pieColors[index % pieColors.length]} />
+                    <Cell
+                      key={`cell-${index}`}
+                      fill={pieColors[index % pieColors.length]}
+                    />
                   ))}
                 </Pie>
                 <Legend />

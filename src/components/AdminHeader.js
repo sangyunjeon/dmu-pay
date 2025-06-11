@@ -3,9 +3,9 @@ import "./AdminHeader.css";
 
 function AdminHeader() {
   const handleLogout = () => {
-    sessionStorage.clear();                        // 상태 제거
+    sessionStorage.clear();
     alert("로그아웃 되었습니다.");
-    window.location.href = "https://dmu-pay.netlify.app/"; 
+    window.location.href = "https://dmu-pay.netlify.app/";
   };
 
   return (
@@ -14,7 +14,7 @@ function AdminHeader() {
         <img src="/logo.png" alt="로고" className="admin-logo" />
         <span className="admin-title">DMU-Pay (관리자)</span>
       </div>
-      <nav className="admin-header-nav">
+      <nav className="admin-header-nav desktop-only">
         <button onClick={handleLogout} className="logout-button">
           로그아웃
         </button>
