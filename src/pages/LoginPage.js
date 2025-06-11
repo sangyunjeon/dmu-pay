@@ -33,7 +33,7 @@ function LoginPage() {
       if (data.success) {
         alert("로그인 성공!");
 
-        // ✅ 관리자/학생/가맹점 역할에 따라 세션 저장
+        // 관리자/학생/가맹점 역할에 따라 세션 저장
         sessionStorage.setItem(data.role, "true");
 
         switch (data.role) {

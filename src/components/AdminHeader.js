@@ -12,7 +12,7 @@ function AdminHeader() {
     <header className="admin-header">
       <div className="admin-header-left">
         <img src="/logo.png" alt="로고" className="admin-logo" />
-        <span className="admin-title">DMU-Pay (admin)</span>
+        <span className="admin-title">DMU-Pay (관리자)</span>
       </div>
       <nav className="admin-header-nav">
         <button onClick={handleLogout} className="logout-button">

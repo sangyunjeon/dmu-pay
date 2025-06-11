@@ -81,3 +81,50 @@
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
+
+/* ✅ 반응형 스타일 추가 */
+@media (max-width: 1024px) {
+  .main-body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 10px;
+  }
+
+  .sidebar ul {
+    display: flex;
+    gap: 20px;
+    margin-top: 0;
+    justify-content: center;
+  }
+
+  .sidebar li {
+    padding: 10px 16px;
+    font-size: 16px;
+  }
+
+  .chart-section {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-content {
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .pie-chart,
+  .bar-chart {
+    padding: 15px;
+  }
+}
