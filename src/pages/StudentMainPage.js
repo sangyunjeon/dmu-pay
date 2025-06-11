@@ -28,7 +28,7 @@ function StudentMainPage() {
             </div>
             <div className="activity-item">
               <span className="date">2025.05.23</span>
-              <span>모닝코로리</span>
+              <span>모닝글로리</span>
               <span className="point minus">-1500P</span>
             </div>
           </div>
@@ -36,7 +36,7 @@ function StudentMainPage() {
           {/* 가맹점 안내 */}
           <div className="card store-guide">
             <h4>가맹점 안내</h4>
-            <p>📍 근처 가게에서 고유코드만 입력하면 결제 완료</p>
+            <p>근처 가게에서 고유코드만 입력하면 결제 완료</p>
             <button className="store-btn">가맹점 찾기</button>
           </div>
 
