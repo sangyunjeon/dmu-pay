@@ -1,12 +1,10 @@
-/* AdminHeader.css */
-
 .admin-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 30px;
-  background-color: #ffffff;
-  border-bottom: 1px solid #e5e7eb;
+  padding: 14px 30px;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
 }
 
 .admin-header-left {
@@ -15,38 +13,18 @@
 }
 
 .admin-logo {
-  width: 36px;
-  height: 36px;
+  width: 30px;
+  height: 30px;
   margin-right: 10px;
 }
 
 .admin-logo-text {
-  font-size: 22px;
+  font-size: 1.5rem;
   font-weight: bold;
   color: #055db4;
 }
 
 .admin-header-right {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.admin-name {
-  font-size: 16px;
-  color: #374151;
-}
-
-.admin-logout {
-  padding: 6px 12px;
-  background-color: #055db4;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 14px;
-}
-
-.admin-logout:hover {
-  background-color: #003f8a;
+  font-size: 1rem;
+  color: #333;
 }
