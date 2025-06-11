@@ -56,6 +56,20 @@
   background-color: rgba(255, 255, 255, 0.2);
 }
 
+.logout-button {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
 .main-content {
   flex: 1;
   padding: 40px;
@@ -74,15 +88,16 @@
   margin-top: 40px;
 }
 
-.pie-chart, .bar-chart {
+.pie-chart,
+.bar-chart {
   flex: 1;
   background: white;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-/* ✅ 반응형 스타일 추가 */
+/* ✅ 반응형 스타일 */
 @media (max-width: 1024px) {
   .main-body {
     flex-direction: column;
@@ -112,6 +127,14 @@
     flex-direction: column;
     gap: 20px;
   }
+
+  .desktop-only {
+    display: none !important;
+  }
+
+  .mobile-only {
+    display: list-item !important;
+  }
 }
 
 @media (max-width: 600px) {
@@ -129,14 +152,11 @@
   }
 }
 
-
-/* 모바일에서만 보이는 요소 설정 */
+/* 기본 상태 */
 .mobile-only {
   display: none;
 }
 
-@media (max-width: 1024px) {
-  .mobile-only {
-    display: block !important;
-  }
+.desktop-only {
+  display: flex;
 }

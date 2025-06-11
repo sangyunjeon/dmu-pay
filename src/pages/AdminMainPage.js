@@ -46,7 +46,6 @@ const usageData = [
 ];
 
 function AdminMainPage() {
-  // ✅ handleLogout 함수 추가
   const handleLogout = () => {
     sessionStorage.clear();
     alert("로그아웃 되었습니다.");
@@ -55,16 +54,14 @@ function AdminMainPage() {
 
   return (
     <div className="admin-page">
-      <AdminHeader />
+      <AdminHeader handleLogout={handleLogout} />
       <div className="main-body">
         <div className="sidebar">
           <ul>
             <li>학생관리</li>
             <li>가맹점관리</li>
-            <li className="mobile-only">
-              <button className="logout-button" onClick={handleLogout}>
-                로그아웃
-              </button>
+            <li className="mobile-only" onClick={handleLogout}>
+              로그아웃
             </li>
           </ul>
         </div>
