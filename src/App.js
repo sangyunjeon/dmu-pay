@@ -4,7 +4,8 @@ import SignUpPage from "./pages/SignUpPage";
 import StudentMainPage from "./pages/StudentMainPage";
 import MerchantMainPage from "./pages/MerchantMainPage";
 import AdminMainPage from "./pages/AdminMainPage";
-import AdminStudentPage from "./pages/AdminStudentPage"; // ✅ 추가
+import AdminStudentPage from "./pages/AdminStudentPage";
+import AdminMerchantPage from "./pages/AdminMerchantPage"; // ✅ 추가
 import PointHistoryPage from "./pages/PointHistoryPage";
 import RankingPage from "./pages/RankingPage";
 import MerchantInfoPage from "./pages/MerchantInfoPage";
@@ -32,8 +33,9 @@ function App() {
         <Route path="/merchants" element={<MerchantInfoPage />} />
         <Route path="/mypage" element={<MyPage />} />
 
-        {/* ✅ 관리자 - 학생관리 페이지 */}
+        {/* ✅ 관리자 - 학생/가맹점 관리 페이지 */}
         <Route path="/admin/student" element={<AdminStudentPage />} />
+        <Route path="/admin/merchant" element={<AdminMerchantPage />} /> {/* ✅ 추가 */}
       </Routes>
     </Router>
   );
