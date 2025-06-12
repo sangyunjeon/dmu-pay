@@ -4,7 +4,7 @@ import SignUpPage from "./pages/SignUpPage";
 import StudentMainPage from "./pages/StudentMainPage";
 import MerchantMainPage from "./pages/MerchantMainPage";
 import AdminMainPage from "./pages/AdminMainPage";
-import AdminStudentPage from "./pages/AdminStudentPage.JS"; // ✅ 추가
+import AdminStudentPage from "./pages/AdminStudentPage"; // ✅ 추가
 import PointHistoryPage from "./pages/PointHistoryPage";
 import RankingPage from "./pages/RankingPage";
 import MerchantInfoPage from "./pages/MerchantInfoPage";
