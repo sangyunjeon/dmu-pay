@@ -61,7 +61,7 @@ function LoginPage() {
   return (
     <div className="login-page">
       <div className="login-left">
-        <h1 className="title">DMU-Pay</h1>
+        <h1 className="login-title">DMU-Pay</h1>
         <p className="subtitle">당신의 노력, 포인트로 돌려받자!</p>
         <p className="desc">
           DMU-Pay는 동양미래대 학생들의 노력을
