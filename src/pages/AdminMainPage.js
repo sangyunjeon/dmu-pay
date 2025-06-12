@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; // ✅ 페이지 이동을 위한 훅
 import "../components/AdminHeader.css";
 import AdminHeader from "../components/AdminHeader";
 import "./AdminMainPage.css";
@@ -46,6 +47,8 @@ const usageData = [
 ];
 
 function AdminMainPage() {
+  const navigate = useNavigate(); // ✅ 페이지 이동용 훅
+
   const handleLogout = () => {
     sessionStorage.clear();
     alert("로그아웃 되었습니다.");
@@ -58,7 +61,7 @@ function AdminMainPage() {
       <div className="main-body">
         <div className="sidebar">
           <ul>
-            <li>학생관리</li>
+            <li onClick={() => navigate("/admin/student")}>학생관리</li>
             <li>가맹점관리</li>
             <li className="mobile-only" onClick={handleLogout}>
               로그아웃

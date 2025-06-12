@@ -1,13 +1,14 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import LoginPage from "./pages/LoginPage";
+import SignUpPage from "./pages/SignUpPage";
 import StudentMainPage from "./pages/StudentMainPage";
 import MerchantMainPage from "./pages/MerchantMainPage";
 import AdminMainPage from "./pages/AdminMainPage";
-import SignUpPage from "./pages/SignUpPage";
+import AdminStudentPage from "./pages/AdminStudentPage.JS"; // ✅ 추가
 import PointHistoryPage from "./pages/PointHistoryPage";
 import RankingPage from "./pages/RankingPage";
-import MerchantInfoPage from './pages/MerchantInfoPage';
-import MyPage from './pages/MyPage';
+import MerchantInfoPage from "./pages/MerchantInfoPage";
+import MyPage from "./pages/MyPage";
 
 function App() {
   return (
@@ -15,8 +16,8 @@ function App() {
       <Routes>
         {/* "/" 접근 시 자동으로 "/login"으로 리디렉트 */}
         <Route path="/" element={<Navigate to="/login" />} />
-        
-        {/* 로그인 관련 */}
+
+        {/* 로그인/회원가입 */}
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignUpPage />} />
 
@@ -30,6 +31,9 @@ function App() {
         <Route path="/ranking" element={<RankingPage />} />
         <Route path="/merchants" element={<MerchantInfoPage />} />
         <Route path="/mypage" element={<MyPage />} />
+
+        {/* ✅ 관리자 - 학생관리 페이지 */}
+        <Route path="/admin/student" element={<AdminStudentPage />} />
       </Routes>
     </Router>
   );
