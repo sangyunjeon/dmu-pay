@@ -1,5 +1,4 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import AdminHeader from "../components/AdminHeader";
 import AdminSidebar from "../components/AdminSidebar"; // ✅ 사이드바 컴포넌트 import
 import "./AdminMainPage.css";
