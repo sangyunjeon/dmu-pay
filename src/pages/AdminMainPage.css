@@ -108,19 +108,18 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 20px;
+    padding: 10px 0; /* ⬅️ 기존 20px → 10px 로 줄임 */
   }
-
   .sidebar ul {
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 10px; /* ⬅️ 위 여백도 살짝 줄임 */
   }
 
   .sidebar li {
-    padding: 15px;
-    font-size: 18px;
+    padding: 10px 16px;  /* ⬅️ 기존 15px → 10px */
+    font-size: 15px;     /* ⬅️ 기존 18px → 15px */
     background-color: #055db4;
     color: white;
     width: 100%;
@@ -128,6 +127,7 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     box-sizing: border-box;
   }
+
 
   .chart-section {
     flex-direction: column;
