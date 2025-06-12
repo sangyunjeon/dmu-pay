@@ -17,4 +17,3 @@ function AdminSidebar({ handleLogout }) {
 }
 
 export default AdminSidebar;
-//asd
