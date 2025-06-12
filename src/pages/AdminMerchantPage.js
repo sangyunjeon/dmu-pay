@@ -19,7 +19,6 @@ function AdminMerchantPage() {
     status: i % 3 === 0 ? "정산완료" : i % 3 === 1 ? "정산대기" : "정산오류",
   }));
 
-  // 상태별 색상 클래스 반환
   const getStatusClass = (status) => {
     switch (status) {
       case "정산완료":
@@ -44,7 +43,7 @@ function AdminMerchantPage() {
       <AdminHeader handleLogout={handleLogout} />
 
       <div className="main-body">
-        <AdminSidebar handleLogout={handleLogout} /> {/* ✅ 사이드바 컴포넌트 적용 */}
+        <AdminSidebar handleLogout={handleLogout} />
 
         <div className="main-content">
           {/* 🔍 검색 영역 */}
@@ -64,8 +63,8 @@ function AdminMerchantPage() {
           </div>
 
           {/* 📋 테이블 영역 */}
-          <div className="card">
-            <table className="history-table">
+          <div className="card merchant-table-wrapper"> {/* ✅ 여기 wrapper 추가 */}
+            <table className="merchant-table"> {/* ✅ className 변경 */}
               <thead>
                 <tr>
                   <th>상호명</th>
