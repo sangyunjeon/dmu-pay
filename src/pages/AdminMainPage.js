@@ -47,7 +47,7 @@ const usageData = [
 ];
 
 function AdminMainPage() {
-  const navigate = useNavigate();
+  
 
   const handleLogout = () => {
     sessionStorage.clear();
