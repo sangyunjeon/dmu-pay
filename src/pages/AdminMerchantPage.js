@@ -49,7 +49,8 @@ function AdminMerchantPage() {
           {/* 🔍 검색 영역 */}
           <div className="card" style={{ marginBottom: "30px" }}>
             <h3>검색</h3>
-            <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+            <div className="merchant-search-bar" style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+
               <input
                 type="text"
                 placeholder="상호명을 입력해주세요"
