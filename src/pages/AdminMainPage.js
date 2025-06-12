@@ -1,7 +1,7 @@
 import React from "react";
-import { useNavigate } from "react-router-dom"; // ✅ 페이지 이동을 위한 훅
-import "../components/AdminHeader.css";
+import { useNavigate } from "react-router-dom";
 import AdminHeader from "../components/AdminHeader";
+import AdminSidebar from "../components/AdminSidebar"; // ✅ 사이드바 컴포넌트 import
 import "./AdminMainPage.css";
 
 import {
@@ -47,7 +47,7 @@ const usageData = [
 ];
 
 function AdminMainPage() {
-  const navigate = useNavigate(); // ✅ 페이지 이동용 훅
+  const navigate = useNavigate();
 
   const handleLogout = () => {
     sessionStorage.clear();
@@ -58,16 +58,9 @@ function AdminMainPage() {
   return (
     <div className="admin-page">
       <AdminHeader handleLogout={handleLogout} />
+
       <div className="main-body">
-        <div className="sidebar">
-          <ul>
-            <li onClick={() => navigate("/admin/student")}>학생관리</li>
-            <li onClick={() => navigate("/admin/merchant")}>가맹점관리</li> {/* ✅ 수정됨 */}
-            <li className="mobile-only" onClick={handleLogout}>
-              로그아웃
-            </li>
-          </ul>
-        </div>
+        <AdminSidebar handleLogout={handleLogout} /> {/* ✅ 컴포넌트로 변경 */}
 
         <div className="main-content">
           <h2 className="title">포인트 지급</h2>

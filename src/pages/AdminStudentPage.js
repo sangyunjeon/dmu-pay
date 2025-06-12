@@ -2,7 +2,8 @@
 
 import React, { useState } from "react";
 import AdminHeader from "../components/AdminHeader";
-import "./AdminMainPage.css"; // 기존 admin 스타일 재사용
+import AdminSidebar from "../components/AdminSidebar"; // ✅ 추가
+import "./AdminMainPage.css"; // ✅ 기존 admin 스타일 재사용
 
 function AdminStudentPage() {
   const [searchName, setSearchName] = useState("");
@@ -16,16 +17,18 @@ function AdminStudentPage() {
     point: 150000,
   }));
 
+  const handleLogout = () => {
+    sessionStorage.clear();
+    alert("로그아웃 되었습니다.");
+    window.location.href = "https://dmu-pay.netlify.app/";
+  };
+
   return (
     <div className="admin-page">
-      <AdminHeader />
+      <AdminHeader handleLogout={handleLogout} />
+
       <div className="main-body">
-        <div className="sidebar">
-          <ul>
-            <li className="active">학생관리</li>
-            <li>가맹점관리</li>
-          </ul>
-        </div>
+        <AdminSidebar handleLogout={handleLogout} /> {/* ✅ 교체 완료 */}
 
         <div className="main-content">
           {/* 🔍 검색 영역 */}

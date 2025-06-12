@@ -1,7 +1,10 @@
+// src/pages/AdminMerchantPage.js
+
 import React, { useState } from "react";
 import AdminHeader from "../components/AdminHeader";
-import "./AdminMainPage.css"; // 기존 스타일 재사용
-import "./AdminMerchantPage.css"; // 필요 시 커스텀 스타일 분리
+import AdminSidebar from "../components/AdminSidebar"; // ✅ 추가
+import "./AdminMainPage.css"; // 공통 스타일
+import "./AdminMerchantPage.css"; // 가맹점 전용 스타일
 
 function AdminMerchantPage() {
   const [searchName, setSearchName] = useState("");
@@ -16,7 +19,7 @@ function AdminMerchantPage() {
     status: i % 3 === 0 ? "정산완료" : i % 3 === 1 ? "정산대기" : "정산오류",
   }));
 
-  // 상태별 색상 클래스
+  // 상태별 색상 클래스 반환
   const getStatusClass = (status) => {
     switch (status) {
       case "정산완료":
@@ -30,26 +33,21 @@ function AdminMerchantPage() {
     }
   };
 
+  const handleLogout = () => {
+    sessionStorage.clear();
+    alert("로그아웃 되었습니다.");
+    window.location.href = "https://dmu-pay.netlify.app/";
+  };
+
   return (
     <div className="admin-page">
-      <AdminHeader />
+      <AdminHeader handleLogout={handleLogout} />
+
       <div className="main-body">
-        <div className="sidebar">
-          <ul>
-            <li onClick={() => window.location.href = "/admin/student"}>학생관리</li>
-            <li className="active">가맹점관리</li>
-            <li className="mobile-only" onClick={() => {
-              sessionStorage.clear();
-              alert("로그아웃 되었습니다.");
-              window.location.href = "/";
-            }}>
-              로그아웃
-            </li>
-          </ul>
-        </div>
+        <AdminSidebar handleLogout={handleLogout} /> {/* ✅ 사이드바 컴포넌트 적용 */}
 
         <div className="main-content">
-          {/* 🔍 검색 */}
+          {/* 🔍 검색 영역 */}
           <div className="card" style={{ marginBottom: "30px" }}>
             <h3>검색</h3>
             <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
@@ -65,7 +63,7 @@ function AdminMerchantPage() {
             </div>
           </div>
 
-          {/* 📋 테이블 */}
+          {/* 📋 테이블 영역 */}
           <div className="card">
             <table className="history-table">
               <thead>
@@ -94,7 +92,7 @@ function AdminMerchantPage() {
               </tbody>
             </table>
 
-            {/* ⏩ 페이징 */}
+            {/* ⏩ 페이징 영역 */}
             <div className="pagination" style={{ marginTop: "20px" }}>
               <button>&laquo;</button>
               <button>&lt;</button>
