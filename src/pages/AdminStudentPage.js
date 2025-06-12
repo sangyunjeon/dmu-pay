@@ -2,14 +2,13 @@
 
 import React, { useState } from "react";
 import AdminHeader from "../components/AdminHeader";
-import AdminSidebar from "../components/AdminSidebar"; // ✅ 추가
-import "./AdminMainPage.css"; // ✅ 기존 admin 스타일 재사용
+import AdminSidebar from "../components/AdminSidebar";
+import "./AdminMainPage.css";
 
 function AdminStudentPage() {
   const [searchName, setSearchName] = useState("");
   const [searchStudentNumber, setSearchStudentNumber] = useState("");
 
-  // 더미 학생 데이터
   const students = Array.from({ length: 10 }, (_, i) => ({
     id: i + 1,
     name: "이름",
@@ -28,32 +27,30 @@ function AdminStudentPage() {
       <AdminHeader handleLogout={handleLogout} />
 
       <div className="main-body">
-        <AdminSidebar handleLogout={handleLogout} /> {/* ✅ 교체 완료 */}
+        <AdminSidebar handleLogout={handleLogout} />
 
         <div className="main-content">
           {/* 🔍 검색 영역 */}
-          <div className="card" style={{ marginBottom: "30px" }}>
+          <div className="card search-box" style={{ marginBottom: "30px" }}>
             <h3>검색</h3>
             <input
               type="text"
               placeholder="이름을 입력해주세요"
               value={searchName}
               onChange={(e) => setSearchName(e.target.value)}
-              style={{ width: "300px", marginRight: "10px", padding: "10px" }}
             />
             <input
               type="text"
               placeholder="학번을 입력해주세요"
               value={searchStudentNumber}
               onChange={(e) => setSearchStudentNumber(e.target.value)}
-              style={{ width: "300px", marginRight: "10px", padding: "10px" }}
             />
-            <button style={{ padding: "10px 20px" }}>검색</button>
+            <button>검색</button>
           </div>
 
           {/* 📋 테이블 영역 */}
-          <div className="card">
-            <table className="history-table">
+          <div className="card student-table-wrapper">
+            <table className="student-table">
               <thead>
                 <tr>
                   <th>NO</th>

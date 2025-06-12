@@ -108,18 +108,19 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 10px 0; /* ⬅️ 기존 20px → 10px 로 줄임 */
+    padding: 10px 0;
   }
+
   .sidebar ul {
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-top: 10px; /* ⬅️ 위 여백도 살짝 줄임 */
+    margin-top: 10px;
   }
 
   .sidebar li {
-    padding: 10px 16px;  /* ⬅️ 기존 15px → 10px */
-    font-size: 15px;     /* ⬅️ 기존 18px → 15px */
+    padding: 10px 16px;
+    font-size: 15px;
     background-color: #055db4;
     color: white;
     width: 100%;
@@ -127,7 +128,6 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     box-sizing: border-box;
   }
-
 
   .chart-section {
     flex-direction: column;
@@ -144,6 +144,33 @@
 
   .mobile-logout {
     display: list-item;
+  }
+}
+
+@media (max-width: 768px) {
+  .search-box input,
+  .search-box button {
+    width: 100% !important;
+    margin: 0 0 10px 0 !important;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+
+  .student-table-wrapper {
+    overflow-x: auto;
+    width: 100%;
+  }
+
+  .student-table {
+    min-width: 600px;
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .student-table th,
+  .student-table td {
+    font-size: 14px;
+    padding: 8px;
   }
 }
 
@@ -170,39 +197,3 @@
 .desktop-only {
   display: flex;
 }
-/* 📱 모바일에서 검색 input/표 너비 자동 조정 및 스크롤 처리 */
-@media (max-width: 768px) {
-  .search-box {
-    width: 100%;
-    padding: 0 10px;
-    box-sizing: border-box;
-  }
-
-  .search-box input,
-  .search-box button {
-    width: 100%;
-    margin-bottom: 10px;
-    font-size: 16px;
-    box-sizing: border-box;
-  }
-
-  .student-table-wrapper {
-    overflow-x: auto;
-    width: 100%;
-  }
-
-  .student-table {
-    min-width: 600px; /* 표가 잘리지 않도록 최소 너비 설정 */
-    width: 100%;
-    border-collapse: collapse;
-  }
-
-  .student-table th,
-  .student-table td {
-    font-size: 14px;
-    padding: 8px;
-  }
-}
-
-
-
