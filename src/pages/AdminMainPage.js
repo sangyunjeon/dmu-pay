@@ -62,7 +62,7 @@ function AdminMainPage() {
         <div className="sidebar">
           <ul>
             <li onClick={() => navigate("/admin/student")}>학생관리</li>
-            <li>가맹점관리</li>
+            <li onClick={() => navigate("/admin/merchant")}>가맹점관리</li> {/* ✅ 수정됨 */}
             <li className="mobile-only" onClick={handleLogout}>
               로그아웃
             </li>
