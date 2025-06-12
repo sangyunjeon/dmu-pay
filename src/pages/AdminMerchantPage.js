@@ -64,8 +64,8 @@ function AdminMerchantPage() {
           </div>
 
           {/* 📋 테이블 영역 */}
-          <div className="card merchant-table-wrapper"> {/* ✅ 여기 wrapper 추가 */}
-            <table className="merchant-table"> {/* ✅ className 변경 */}
+          <div className="card admin-merchant-table-wrapper"> {/* ✅ 여기 wrapper 추가 */}
+            <table className="admin-merchant-table"> {/* ✅ className 변경 */}
               <thead>
                 <tr>
                   <th>상호명</th>

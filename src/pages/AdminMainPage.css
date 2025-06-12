@@ -138,13 +138,13 @@
 }
 
 /* ✅ 표 디자인 - 가맹점용 표 (학생과 동일 스타일) */
-.merchant-table {
+.admin-merchant-table {
   width: 100%;
   border-collapse: collapse;
   border: 1px solid #ddd;
 }
 
-.merchant-table th {
+.admin-merchant-table th {
   background-color: #055db4;
   color: white;
   padding: 12px;
@@ -153,14 +153,14 @@
   font-size: 16px;
 }
 
-.merchant-table td {
+.admin-merchant-table td {
   padding: 12px;
   font-size: 15px;
   border-bottom: 1px solid #eee;
   text-align: center;
 }
 
-.merchant-table button {
+.admin-merchant-table button {
   padding: 6px 10px;
   font-size: 14px;
   border: none;
@@ -245,17 +245,17 @@
   }
 
   /* ✅ 가맹점 표 반응형 대응 */
-  .merchant-table-wrapper {
+  .admin-merchant-table-wrapper {
     overflow-x: auto;
     width: 100%;
   }
 
-  .merchant-table {
+  .admin-merchant-table {
     min-width: 700px;
   }
 
-  .merchant-table th,
-  .merchant-table td {
+  .admin-merchant-table th,
+  .admin-merchant-table td {
     font-size: 14px;
     padding: 8px;
   }
