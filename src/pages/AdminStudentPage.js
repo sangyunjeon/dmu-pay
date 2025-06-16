@@ -30,7 +30,7 @@ function AdminStudentPage() {
         <AdminSidebar handleLogout={handleLogout} />
 
         <div className="main-content">
-          {/* 🔍 검색 영역 */}
+          {/*  검색 영역 */}
           <div className="card search-box" style={{ marginBottom: "30px" }}>
             <h3>검색</h3>
             <input
@@ -48,7 +48,7 @@ function AdminStudentPage() {
             <button>검색</button>
           </div>
 
-          {/* 📋 테이블 영역 */}
+          {/*  테이블 영역 */}
           <div className="card student-table-wrapper">
             <table className="student-table">
               <thead>
@@ -79,7 +79,7 @@ function AdminStudentPage() {
               </tbody>
             </table>
 
-            {/* ⏩ 페이지네이션 */}
+            {/* 페이지네이션 */}
             <div className="pagination" style={{ marginTop: "20px" }}>
               <button>&laquo;</button>
               <button>&lt;</button>

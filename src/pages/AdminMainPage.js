@@ -1,6 +1,6 @@
 import React from "react";
 import AdminHeader from "../components/AdminHeader";
-import AdminSidebar from "../components/AdminSidebar"; // ✅ 사이드바 컴포넌트 import
+import AdminSidebar from "../components/AdminSidebar"; //  사이드바 컴포넌트 import
 import "./AdminMainPage.css";
 
 import {
@@ -59,7 +59,7 @@ function AdminMainPage() {
       <AdminHeader handleLogout={handleLogout} />
 
       <div className="main-body">
-        <AdminSidebar handleLogout={handleLogout} /> {/* ✅ 컴포넌트로 변경 */}
+        <AdminSidebar handleLogout={handleLogout} /> {/*  컴포넌트로 변경 */}
 
         <div className="main-content">
           <h2 className="title">포인트 지급</h2>

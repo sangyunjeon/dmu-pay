@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "./AdminHeader.css"; // ✅ 기존 sidebar 스타일 포함된 CSS 재사용
+import "./AdminHeader.css"; //  기존 sidebar 스타일 포함된 CSS 재사용
 
 function AdminSidebar({ handleLogout }) {
   const navigate = useNavigate();

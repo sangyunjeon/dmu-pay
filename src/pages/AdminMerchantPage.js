@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import AdminHeader from "../components/AdminHeader";
-import AdminSidebar from "../components/AdminSidebar"; // ✅ 추가
+import AdminSidebar from "../components/AdminSidebar"; 
 import "./AdminMainPage.css"; // 공통 스타일
 import "./AdminMerchantPage.css"; // 가맹점 전용 스타일
 
@@ -46,7 +46,7 @@ function AdminMerchantPage() {
         <AdminSidebar handleLogout={handleLogout} />
 
         <div className="main-content">
-          {/* 🔍 검색 영역 */}
+          {/* 검색 영역 */}
           <div className="card" style={{ marginBottom: "30px" }}>
             <h3>검색</h3>
             <div className="merchant-search-bar" style={{ display: "flex", alignItems: "center", gap: "10px" }}>
@@ -63,9 +63,9 @@ function AdminMerchantPage() {
             </div>
           </div>
 
-          {/* 📋 테이블 영역 */}
-          <div className="card admin-merchant-table-wrapper"> {/* ✅ 여기 wrapper 추가 */}
-            <table className="admin-merchant-table"> {/* ✅ className 변경 */}
+          {/* 테이블 영역 */}
+          <div className="card admin-merchant-table-wrapper"> {/* wrapper 추가 */}
+            <table className="admin-merchant-table"> {/* className 변경 */}
               <thead>
                 <tr>
                   <th>상호명</th>
@@ -92,7 +92,7 @@ function AdminMerchantPage() {
               </tbody>
             </table>
 
-            {/* ⏩ 페이징 영역 */}
+            {/* 페이징 영역 */}
             <div className="pagination" style={{ marginTop: "20px" }}>
               <button>&laquo;</button>
               <button>&lt;</button>

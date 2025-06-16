@@ -105,7 +105,7 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-/* ✅ 표 디자인 - 학생용 표 */
+/* 표 디자인 - 학생용 표 */
 .student-table {
   width: 100%;
   border-collapse: collapse;
@@ -137,7 +137,7 @@
   cursor: pointer;
 }
 
-/* ✅ 표 디자인 - 가맹점용 표 (학생과 동일 스타일) */
+/* 표 디자인 - 가맹점용 표 (학생과 동일 스타일) */
 .admin-merchant-table {
   width: 100%;
   border-collapse: collapse;
@@ -169,7 +169,7 @@
   cursor: pointer;
 }
 
-/* ✅ 반응형 스타일 */
+/* 반응형 스타일 */
 @media (max-width: 1024px) {
   .main-body {
     flex-direction: column;
@@ -219,7 +219,7 @@
   }
 }
 
-/* 📱 모바일에서 검색 input, 버튼 반응형 처리 */
+/* 모바일에서 검색 input, 버튼 반응형 처리 */
 @media (max-width: 768px) {
   .search-box input,
   .search-box button {
@@ -244,7 +244,7 @@
     padding: 8px;
   }
 
-  /* ✅ 가맹점 표 반응형 대응 */
+  /* 가맹점 표 반응형 대응 */
   .admin-merchant-table-wrapper {
     overflow-x: auto;
     width: 100%;
