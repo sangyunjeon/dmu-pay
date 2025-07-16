@@ -1,6 +1,7 @@
 // src/pages/AdminMerchantPage.js
 
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; // 추가
 import AdminHeader from "../components/AdminHeader";
 import AdminSidebar from "../components/AdminSidebar"; 
 import "./AdminMainPage.css"; // 공통 스타일
@@ -8,6 +9,7 @@ import "./AdminMerchantPage.css"; // 가맹점 전용 스타일
 
 function AdminMerchantPage() {
   const [searchName, setSearchName] = useState("");
+  const navigate = useNavigate(); // 추가
 
   // 더미 가맹점 데이터
   const merchants = Array.from({ length: 10 }, (_, i) => ({
@@ -59,13 +61,18 @@ function AdminMerchantPage() {
                 style={{ padding: "10px", width: "300px" }}
               />
               <button style={{ padding: "10px 20px" }}>검색</button>
-              <button style={{ marginLeft: "auto", padding: "10px 20px" }}>신규등록</button>
+              <button
+                style={{ marginLeft: "auto", padding: "10px 20px" }}
+                onClick={() => navigate("/admin/merchant/register")}
+              >
+                신규등록
+              </button>
             </div>
           </div>
 
           {/* 테이블 영역 */}
-          <div className="card admin-merchant-table-wrapper"> {/* wrapper 추가 */}
-            <table className="admin-merchant-table"> {/* className 변경 */}
+          <div className="card admin-merchant-table-wrapper">
+            <table className="admin-merchant-table">
               <thead>
                 <tr>
                   <th>상호명</th>
