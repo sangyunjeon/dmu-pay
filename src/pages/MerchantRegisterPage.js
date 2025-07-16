@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; 
 import './MerchantRegisterPage.css';
 import AdminHeader from '../components/AdminHeader';
 import AdminSidebar from '../components/AdminSidebar';
 
 function MerchantRegisterPage() {
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     name: '',
     code: '',
@@ -29,14 +32,20 @@ function MerchantRegisterPage() {
     // TODO: fetch로 서버에 데이터 전송
   };
 
+
+  const handleLogout = () => {
+    sessionStorage.clear();
+    alert('로그아웃 되었습니다.');
+    navigate('/login');
+  };
+
   return (
     <div className="merchant-register-container">
-      <AdminHeader />
+      <AdminHeader handleLogout={handleLogout} /> 
       <div className="merchant-register-body">
         <AdminSidebar />
         <div className="merchant-register-content">
           <h2>가맹점 신규등록</h2>
-          <div className="breadcrumb">HOME &gt; 가맹점 관리 &gt; 가맹점 신규등록</div>
           <form onSubmit={handleSubmit} className="merchant-form">
             <fieldset>
               <legend>■ 가맹점 정보</legend>
