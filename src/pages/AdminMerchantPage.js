@@ -65,7 +65,7 @@ function AdminMerchantPage() {
                 style={{ marginLeft: "auto", padding: "10px 20px" }}
                 onClick={() => navigate("/admin/merchant/register")}
               >
-                신규등록
+                가맹점 등록
               </button>
             </div>
           </div>
