@@ -7,7 +7,7 @@ import AdminSidebar from '../components/AdminSidebar';
 import './MerchantDetailPage.css';
 
 function MerchantDetailPage() {
- // const { code } = useParams();
+
   const navigate = useNavigate();
 
   // 더미 요약 데이터 (추후 데이터랑 연동하면됨)
