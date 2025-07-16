@@ -1,0 +1,81 @@
+/* src/pages/MerchantRegisterPage.css */
+
+.merchant-register-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.merchant-register-body {
+  display: flex;
+  flex: 1;
+}
+
+.merchant-register-content {
+  flex: 1;
+  padding: 40px;
+  background-color: #fff;
+}
+
+.breadcrumb {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.merchant-form fieldset {
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+.merchant-form legend {
+  font-weight: bold;
+  padding: 0 10px;
+}
+
+.merchant-form table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.merchant-form th {
+  text-align: left;
+  padding: 10px;
+  background-color: #f0f0f0;
+  width: 120px;
+}
+
+.merchant-form td {
+  padding: 10px;
+}
+
+.merchant-form input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.section-divider {
+  background-color: #e0e0e0;
+  font-weight: bold;
+  text-align: center;
+}
+
+.btn-wrapper {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.btn-wrapper button {
+  padding: 10px 30px;
+  font-size: 16px;
+  background-color: #055db4;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-wrapper button:hover {
+  background-color: #003f87;
+}
