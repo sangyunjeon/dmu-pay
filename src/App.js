@@ -10,6 +10,7 @@ import PointHistoryPage from "./pages/PointHistoryPage";
 import RankingPage from "./pages/RankingPage";
 import MerchantInfoPage from "./pages/MerchantInfoPage";
 import MyPage from "./pages/MyPage";
+import MerchantRegisterPage from './pages/MerchantRegisterPage';
 
 function App() {
   return (
@@ -36,6 +37,9 @@ function App() {
         {/*  관리자 - 학생/가맹점 관리 페이지 */}
         <Route path="/admin/student" element={<AdminStudentPage />} />
         <Route path="/admin/merchant" element={<AdminMerchantPage />} /> {/*  추가 */}
+
+        {/*  관리자 - 가맹점 등록  */}
+        <Route path="/admin/merchant/register" element={<MerchantRegisterPage />} />
       </Routes>
     </Router>
   );
