@@ -11,6 +11,7 @@ import RankingPage from "./pages/RankingPage";
 import MerchantInfoPage from "./pages/MerchantInfoPage";
 import MyPage from "./pages/MyPage";
 import MerchantRegisterPage from './pages/MerchantRegisterPage';
+import MerchantEditPage from './pages/MerchantEditPage';
 
 function App() {
   return (
@@ -38,8 +39,10 @@ function App() {
         <Route path="/admin/student" element={<AdminStudentPage />} />
         <Route path="/admin/merchant" element={<AdminMerchantPage />} /> {/*  추가 */}
 
-        {/*  관리자 - 가맹점 등록  */}
+        {/*  관리자 - 가맹점 등록 / 수정 */}
         <Route path="/admin/merchant/register" element={<MerchantRegisterPage />} />
+        <Route path="/admin/merchant/edit/:code" element={<MerchantEditPage />} />
+
       </Routes>
     </Router>
   );

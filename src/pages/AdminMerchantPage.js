@@ -93,7 +93,8 @@ function AdminMerchantPage() {
                     <td>{m.date}</td>
                     <td className={getStatusClass(m.status)}>{m.status}</td>
                     <td><button>보기</button></td>
-                    <td><button>수정</button></td>
+                    <td><button onClick={() => navigate(`/admin/merchant/edit/${m.code}`)}>수정</button>
+</td>
                   </tr>
                 ))}
               </tbody>
