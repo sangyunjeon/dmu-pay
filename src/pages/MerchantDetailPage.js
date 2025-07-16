@@ -6,10 +6,6 @@ import AdminHeader from '../components/AdminHeader';
 import AdminSidebar from '../components/AdminSidebar';
 import './MerchantDetailPage.css';
 
-// eslint-disable-next-line no-unused-vars
-import { useParams, useNavigate } from 'react-router-dom';
-
-
 function MerchantDetailPage() {
 
   const navigate = useNavigate();
