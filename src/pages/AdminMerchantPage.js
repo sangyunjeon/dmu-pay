@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom"; // 추가
 import AdminHeader from "../components/AdminHeader";
-import AdminSidebar from "../components/AdminSidebar"; 
+import AdminSidebar from "../components/AdminSidebar";
 import "./AdminMainPage.css"; // 공통 스타일
 import "./AdminMerchantPage.css"; // 가맹점 전용 스타일
 
@@ -51,8 +51,10 @@ function AdminMerchantPage() {
           {/* 검색 영역 */}
           <div className="card" style={{ marginBottom: "30px" }}>
             <h3>검색</h3>
-            <div className="merchant-search-bar" style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-
+            <div
+              className="merchant-search-bar"
+              style={{ display: "flex", alignItems: "center", gap: "10px" }}
+            >
               <input
                 type="text"
                 placeholder="상호명을 입력해주세요"
@@ -92,9 +94,24 @@ function AdminMerchantPage() {
                     <td>{m.phone}</td>
                     <td>{m.date}</td>
                     <td className={getStatusClass(m.status)}>{m.status}</td>
-                    <td><button>보기</button></td>
-                    <td><button onClick={() => navigate(`/admin/merchant/edit/${m.code}`)}>수정</button>
-</td>
+                    <td>
+                      <button
+                        onClick={() =>
+                          navigate(`/admin/merchant/detail/${m.code}`)
+                        }
+                      >
+                        보기
+                      </button>
+                    </td>
+                    <td>
+                      <button
+                        onClick={() =>
+                          navigate(`/admin/merchant/edit/${m.code}`)
+                        }
+                      >
+                        수정
+                      </button>
+                    </td>
                   </tr>
                 ))}
               </tbody>
