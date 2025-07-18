@@ -15,9 +15,8 @@
   flex: 1;
   padding: 40px;
   background-color: #fff;
-  width: 100%;
   max-width: 1200px;
-  margin: 0 auto; /* 가운데 정렬 */
+  margin: 0 auto;
 }
 
 .breadcrumb {
@@ -47,7 +46,6 @@
   padding: 10px;
   background-color: #f0f0f0;
   width: 120px;
-  vertical-align: top;
 }
 
 .merchant-form td {
@@ -56,6 +54,7 @@
 
 .merchant-form input {
   width: 100%;
+  max-width: 100%;
   padding: 8px;
   box-sizing: border-box;
 }
@@ -64,7 +63,6 @@
   background-color: #e0e0e0;
   font-weight: bold;
   text-align: center;
-  padding: 8px 0;
 }
 
 .btn-wrapper {
@@ -79,20 +77,33 @@
   color: white;
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: 0.2s;
 }
 
 .btn-wrapper button:hover {
   background-color: #003f87;
 }
 
-/* 태블릿 대응 */
-@media (max-width: 992px) {
+
+@media (max-width: 768px) {
+  .merchant-register-body {
+    flex-direction: column;
+  }
+
+  .admin-sidebar {
+    display: none;
+  }
+
   .merchant-register-content {
-    padding: 30px 20px;
+    padding: 20px;
+    max-width: 100%;
   }
 
   .merchant-form table,
+  .merchant-form fieldset {
+    width: 100%;
+  }
+
   .merchant-form th,
   .merchant-form td {
     display: block;
@@ -100,38 +111,39 @@
   }
 
   .merchant-form th {
-    padding: 5px 0;
     background-color: transparent;
+    padding: 5px 0;
+    font-weight: bold;
   }
 
   .merchant-form td {
-    padding: 0 0 15px;
+    padding: 5px 0 15px;
   }
 
-  .section-divider {
-    text-align: left;
-    padding-left: 5px;
+  .btn-wrapper {
+    text-align: center;
   }
 
   .btn-wrapper button {
-    width: 100%;
-    padding: 14px;
-    font-size: 16px;
+    width: 90%; 
+    font-size: 15px;
+    padding: 12px;
   }
 }
 
-/* 모바일 대응 */
-@media (max-width: 576px) {
-  .merchant-register-content {
-    padding: 20px 10px;
-  }
 
+@media (max-width: 480px) {
   .breadcrumb {
     font-size: 12px;
   }
 
+  .merchant-register-content {
+    padding: 15px;
+  }
+
   .btn-wrapper button {
     font-size: 14px;
-    padding: 12px;
+    padding: 10px;
+    width: 100%;
   }
 }
