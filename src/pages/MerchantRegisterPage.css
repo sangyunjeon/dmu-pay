@@ -26,16 +26,15 @@
   margin: 0 auto;
 }
 
-.breadcrumb {
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 20px;
-}
-
 /* ===== 폼 스타일 ===== */
 .merchant-form fieldset {
   border: 1px solid #ccc;
   padding: 20px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fafafa;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.05);
 }
 
 .merchant-form legend {
@@ -46,6 +45,7 @@
 .merchant-form table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed;
 }
 
 .merchant-form th {
@@ -147,6 +147,11 @@
     max-width: 100% !important;
     width: 100% !important;
     margin: 0 !important;
+  }
+
+  .merchant-form fieldset {
+    max-width: 100% !important;
+    padding: 15px;
   }
 
   .merchant-form input {
