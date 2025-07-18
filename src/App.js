@@ -12,6 +12,7 @@ import MerchantInfoPage from "./pages/MerchantInfoPage";
 import MyPage from "./pages/MyPage";
 import MerchantRegisterPage from './pages/MerchantRegisterPage';
 import MerchantEditPage from './pages/MerchantEditPage';
+import MerchantDetailPage from "./pages/MerchantDetailPage";
 
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
         {/*  관리자 - 가맹점 등록 / 수정 /  */}
         <Route path="/admin/merchant/register" element={<MerchantRegisterPage />} />
         <Route path="/admin/merchant/edit/:code" element={<MerchantEditPage />} />
+        <Route path="/admin/merchant/detail/:code" element={<MerchantDetailPage />} />
      
 
       </Routes>

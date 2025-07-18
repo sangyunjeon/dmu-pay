@@ -1,0 +1,55 @@
+.summary-boxes {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.summary-item {
+  background: #f9f9f9;
+  padding: 20px;
+  width: 200px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.settle-button {
+  padding: 15px 30px;
+  background: black;
+  color: white;
+  font-size: 18px;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.history-table th,
+.history-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.text-success {
+  color: green;
+}
+
+.text-danger {
+  color: red;
+}
+
+.pagination {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.pagination button {
+  margin: 0 4px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
