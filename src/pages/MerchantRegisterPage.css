@@ -15,8 +15,9 @@
   flex: 1;
   padding: 40px;
   background-color: #fff;
+  width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto; /* 가운데 정렬 */
 }
 
 .breadcrumb {
@@ -46,6 +47,7 @@
   padding: 10px;
   background-color: #f0f0f0;
   width: 120px;
+  vertical-align: top;
 }
 
 .merchant-form td {
@@ -54,7 +56,6 @@
 
 .merchant-form input {
   width: 100%;
-  max-width: 100%;
   padding: 8px;
   box-sizing: border-box;
 }
@@ -63,6 +64,7 @@
   background-color: #e0e0e0;
   font-weight: bold;
   text-align: center;
+  padding: 8px 0;
 }
 
 .btn-wrapper {
@@ -77,33 +79,20 @@
   color: white;
   border: none;
   cursor: pointer;
-  transition: 0.2s;
+  transition: background-color 0.3s;
 }
 
 .btn-wrapper button:hover {
   background-color: #003f87;
 }
 
-
-@media (max-width: 768px) {
-  .merchant-register-body {
-    flex-direction: column;
-  }
-
-  .admin-sidebar {
-    display: none;
-  }
-
+/* 태블릿 대응 */
+@media (max-width: 992px) {
   .merchant-register-content {
-    padding: 20px;
-    max-width: 100%;
+    padding: 30px 20px;
   }
 
   .merchant-form table,
-  .merchant-form fieldset {
-    width: 100%;
-  }
-
   .merchant-form th,
   .merchant-form td {
     display: block;
@@ -111,39 +100,38 @@
   }
 
   .merchant-form th {
-    background-color: transparent;
     padding: 5px 0;
-    font-weight: bold;
+    background-color: transparent;
   }
 
   .merchant-form td {
-    padding: 5px 0 15px;
+    padding: 0 0 15px;
   }
 
-  .btn-wrapper {
-    text-align: center;
+  .section-divider {
+    text-align: left;
+    padding-left: 5px;
   }
 
   .btn-wrapper button {
-    width: 90%; 
-    font-size: 15px;
-    padding: 12px;
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
   }
 }
 
+/* 모바일 대응 */
+@media (max-width: 576px) {
+  .merchant-register-content {
+    padding: 20px 10px;
+  }
 
-@media (max-width: 480px) {
   .breadcrumb {
     font-size: 12px;
   }
 
-  .merchant-register-content {
-    padding: 15px;
-  }
-
   .btn-wrapper button {
     font-size: 14px;
-    padding: 10px;
-    width: 100%;
+    padding: 12px;
   }
 }
