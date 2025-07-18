@@ -24,6 +24,10 @@
 }
 
 /* 폼 스타일 */
+.merchant-form {
+  overflow-x: auto;
+}
+
 .merchant-form fieldset {
   border: 1px solid #ccc;
   padding: 20px;
@@ -37,6 +41,8 @@
 .merchant-form table {
   width: 100%;
   border-collapse: collapse;
+  min-width: 600px;
+  display: block;
 }
 
 .merchant-form th {
@@ -52,6 +58,7 @@
 
 .merchant-form input {
   width: 100%;
+  max-width: 100%;
   padding: 8px;
   box-sizing: border-box;
 }
@@ -80,8 +87,16 @@
   background-color: #003f87;
 }
 
-/* ✅ 반응형 모바일 대응 */
+/* ✅ 반응형: 태블릿 이하 */
 @media (max-width: 768px) {
+  .merchant-register-body {
+    flex-direction: column; /* 사이드바와 폼을 위아래로 정렬 */
+  }
+
+  .admin-sidebar {
+    display: none; /* 모바일에서 사이드바 숨김 */
+  }
+
   .merchant-register-content {
     padding: 20px;
   }
@@ -106,10 +121,6 @@
     padding: 5px 0 15px;
   }
 
-  .btn-wrapper {
-    text-align: center;
-  }
-
   .btn-wrapper button {
     width: 100%;
     padding: 12px;
@@ -117,9 +128,14 @@
   }
 }
 
+/* ✅ 반응형: 작은 모바일 */
 @media (max-width: 480px) {
   .breadcrumb {
     font-size: 12px;
+  }
+
+  .merchant-register-content {
+    padding: 15px;
   }
 
   .btn-wrapper button {
