@@ -20,10 +20,12 @@
 
 .merchant-register-content {
   flex: 1;
-  padding: 40px;
+  padding: 40px 24px;
   background-color: #fff;
-  max-width: 1200px;
+  width: 100%;
+  max-width: 100%;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 /* ===== 폼 스타일 ===== */
@@ -35,6 +37,7 @@
   margin: 0 auto;
   background-color: #fafafa;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
 }
 
 .merchant-form legend {
@@ -102,14 +105,20 @@
   }
 
   .merchant-register-content {
-    padding: 30px 20px;
-    max-width: 100%;
+    padding: 30px 16px;
     width: 100%;
-    margin: 0;
+    max-width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
   }
 
-  .merchant-form table,
   .merchant-form fieldset {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  .merchant-form table {
     width: 100%;
   }
 
@@ -130,7 +139,7 @@
   }
 
   .btn-wrapper button {
-    width: 90%;
+    width: 100%;
     font-size: 15px;
     padding: 12px;
   }
@@ -143,15 +152,16 @@
   }
 
   .merchant-register-content {
-    padding: 10px;
-    max-width: 100% !important;
+    padding: 16px 12px;
     width: 100% !important;
-    margin: 0 !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    box-sizing: border-box;
   }
 
   .merchant-form fieldset {
+    padding: 14px;
     max-width: 100% !important;
-    padding: 15px;
   }
 
   .merchant-form input {
