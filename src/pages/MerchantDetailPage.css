@@ -1,3 +1,4 @@
+/* 공통 레이아웃 */
 .admin-page {
   display: flex;
   flex-direction: column;
@@ -27,11 +28,13 @@
   margin-top: 5px;
 }
 
+/* 요약 박스 */
 .summary-section {
   display: flex;
   align-items: center;
   gap: 40px;
   margin-bottom: 30px;
+  flex-wrap: wrap;
 }
 
 .summary-box {
@@ -57,6 +60,7 @@
   cursor: pointer;
 }
 
+/* 정산 내역 테이블 */
 .history-table {
   width: 100%;
   border-collapse: collapse;
@@ -76,4 +80,55 @@
 
 .text-danger {
   color: red;
+}
+
+@media (max-width: 768px) {
+  .admin-container {
+    flex-direction: column;
+  }
+
+  .admin-content {
+    padding: 20px;
+  }
+
+  .summary-section {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+  }
+
+  .summary-box {
+    width: 100%;
+  }
+
+  .summary-button-wrap {
+    margin-left: 0;
+    text-align: right;
+  }
+
+  .settle-button {
+    width: 100%;
+  }
+
+  .history-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .history-table table {
+    width: 100%;
+    min-width: 600px;
+  }
+}
+
+@media (max-width: 480px) {
+  .breadcrumb {
+    font-size: 12px;
+  }
+
+  .settle-button {
+    font-size: 14px;
+    padding: 12px 20px;
+  }
 }

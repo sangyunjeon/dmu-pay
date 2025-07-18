@@ -1,5 +1,4 @@
-/* src/pages/MerchantRegisterPage.css */
-
+/* 기본 레이아웃 */
 .merchant-register-container {
   display: flex;
   flex-direction: column;
@@ -24,6 +23,7 @@
   margin-bottom: 20px;
 }
 
+/* 폼 스타일 */
 .merchant-form fieldset {
   border: 1px solid #ccc;
   padding: 20px;
@@ -78,4 +78,52 @@
 
 .btn-wrapper button:hover {
   background-color: #003f87;
+}
+
+/* ✅ 반응형 모바일 대응 */
+@media (max-width: 768px) {
+  .merchant-register-content {
+    padding: 20px;
+  }
+
+  .merchant-form fieldset {
+    padding: 15px;
+  }
+
+  .merchant-form th,
+  .merchant-form td {
+    display: block;
+    width: 100%;
+  }
+
+  .merchant-form th {
+    background-color: transparent;
+    padding: 5px 0;
+    font-weight: bold;
+  }
+
+  .merchant-form td {
+    padding: 5px 0 15px;
+  }
+
+  .btn-wrapper {
+    text-align: center;
+  }
+
+  .btn-wrapper button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .breadcrumb {
+    font-size: 12px;
+  }
+
+  .btn-wrapper button {
+    font-size: 14px;
+    padding: 10px;
+  }
 }

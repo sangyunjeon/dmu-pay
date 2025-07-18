@@ -28,7 +28,7 @@ function AdminStudentPointPage() {
 
         <div className="admin-content">
           <h2>학생 포인트 내역</h2>
-          <p className="breadcrumb">HOME &gt; 학생 관리 &gt; 학생 포인트내역</p>
+          
 
           <div className="student-info">
             <p><strong>이름:</strong> 박수민</p>
