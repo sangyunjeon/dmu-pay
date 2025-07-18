@@ -1,4 +1,4 @@
-/* 공통 레이아웃 */
+/* ===== 기본 레이아웃 ===== */
 .admin-page {
   display: flex;
   flex-direction: column;
@@ -21,10 +21,10 @@
 
 .admin-content {
   flex: 1;
-  padding: 40px;
+  padding: 40px 24px;
   background-color: #fff;
   width: 100%;
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -93,8 +93,8 @@
   color: red;
 }
 
-/* ===== 반응형 - 태블릿 이하 (768px ↓) ===== */
-@media (max-width: 768px) {
+/* ===== 반응형 - 태블릿 이하 (1024px ↓) ===== */
+@media (max-width: 1024px) {
   .admin-container {
     flex-direction: column;
   }
@@ -104,10 +104,11 @@
   }
 
   .admin-content {
-    padding: 20px;
+    padding: 30px 16px;
     width: 100%;
     max-width: 100%;
-    margin: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
   }
 
   .summary-section {
@@ -145,6 +146,14 @@
 @media (max-width: 480px) {
   .breadcrumb {
     font-size: 12px;
+  }
+
+  .admin-content {
+    padding: 16px 12px;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    box-sizing: border-box;
   }
 
   .settle-button {
