@@ -14,7 +14,6 @@ import MerchantRegisterPage from './pages/MerchantRegisterPage';
 import MerchantEditPage from './pages/MerchantEditPage';
 import MerchantDetailPage from "./pages/MerchantDetailPage";
 import AdminStudentPointPage from './pages/AdminStudentPointPage';
-import AdminStudentPointEditPage from './pages/AdminStudentPointEditPage'; // ← 추가
 
 
 
@@ -50,10 +49,8 @@ function App() {
         <Route path="/admin/merchant/detail/:code" element={<MerchantDetailPage />} />
 
 
-        {/*  관리자 - 학생관리 / 포인트 내역 / 포인트지급차감*/}
+        {/*  관리자 - 학생관리 / 포인트 내역 /  */}
         <Route path="/admin/student/point/:studentId" element={<AdminStudentPointPage />} />
-        <Route path="/admin/student/point/edit/:studentId" element={<AdminStudentPointEditPage />} />
-
      
 
       </Routes>
