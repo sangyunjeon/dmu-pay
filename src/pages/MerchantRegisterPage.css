@@ -91,7 +91,7 @@
   background-color: #003f87;
 }
 
-/* ===== 반응형 - 태블릿 & 중간 해상도 이하 (1024px ↓) ===== */
+/* ===== 반응형 - 태블릿 이하 (1024px ↓) ===== */
 @media (max-width: 1024px) {
   .merchant-register-body {
     flex-direction: column;
@@ -104,6 +104,8 @@
   .merchant-register-content {
     padding: 30px 20px;
     max-width: 100%;
+    width: 100%;
+    margin: 0;
   }
 
   .merchant-form table,
@@ -141,12 +143,15 @@
   }
 
   .merchant-register-content {
-    padding: 10px; /* 더 좁게 설정해서 input 공간 확보 */
+    padding: 10px;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
   }
 
   .merchant-form input {
     font-size: 16px;
-    height: 42px;  /* 입력창 더 크게 */
+    height: 42px;
   }
 
   .btn-wrapper button {
