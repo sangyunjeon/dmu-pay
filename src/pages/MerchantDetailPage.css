@@ -24,7 +24,7 @@
   padding: 40px 24px;
   background-color: #fff;
   width: 100%;
-  max-width: 1200px; /* ✅ 데스크탑 이하에서도 제한 유지 */
+  max-width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -76,15 +76,6 @@
   width: 100%;
   border-collapse: collapse;
   background-color: #fff;
-  margin-top: 20px;
-  overflow-x: auto;
-  display: block;
-  white-space: nowrap;
-}
-
-.history-table table {
-  width: 100%;
-  min-width: 600px;
 }
 
 .history-table th,
@@ -114,7 +105,8 @@
 
   .admin-content {
     padding: 30px 16px;
-    max-width: 95%; /* ✅ 좌우 여백 확보 */
+    width: 100%;
+    max-width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
   }
@@ -139,10 +131,13 @@
   }
 
   .history-table {
-    margin-top: 20px;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
   }
 
   .history-table table {
+    width: 100%;
     min-width: 600px;
   }
 }
@@ -155,7 +150,8 @@
 
   .admin-content {
     padding: 16px 12px;
-    max-width: 95% !important;
+    width: 100% !important;
+    max-width: 100% !important;
     margin: 0 auto !important;
     box-sizing: border-box;
   }
@@ -163,15 +159,5 @@
   .settle-button {
     font-size: 14px;
     padding: 12px 20px;
-  }
-
-  .summary-box {
-    font-size: 14px;
-  }
-
-  .history-table th,
-  .history-table td {
-    font-size: 13px;
-    padding: 10px;
   }
 }
