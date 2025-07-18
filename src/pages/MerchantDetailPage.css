@@ -12,10 +12,21 @@
   min-height: calc(100vh - 60px); /* 헤더 높이 제외 */
 }
 
+.admin-sidebar {
+  width: 250px;
+  min-width: 200px;
+  background-color: #055db4;
+  color: white;
+}
+
 .admin-content {
   flex: 1;
   padding: 40px;
   background-color: #fff;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .page-title {
@@ -82,13 +93,21 @@
   color: red;
 }
 
+/* ===== 반응형 - 태블릿 이하 (768px ↓) ===== */
 @media (max-width: 768px) {
   .admin-container {
     flex-direction: column;
   }
 
+  .admin-sidebar {
+    display: none;
+  }
+
   .admin-content {
     padding: 20px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
   }
 
   .summary-section {
@@ -122,6 +141,7 @@
   }
 }
 
+/* ===== 반응형 - 스마트폰 (480px ↓) ===== */
 @media (max-width: 480px) {
   .breadcrumb {
     font-size: 12px;
