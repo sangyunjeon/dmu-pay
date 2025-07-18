@@ -1,10 +1,4 @@
 /* ===== 기본 레이아웃 ===== */
-body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden; /* ✅ 페이지 전체 좌우 튀어나감 방지 */
-}
-
 .admin-page {
   display: flex;
   flex-direction: column;
@@ -15,7 +9,8 @@ body {
 .admin-container {
   display: flex;
   flex: 1;
-  min-height: calc(100vh - 60px); /* 헤더 높이 제외 */
+  min-height: calc(100vh - 60px);
+  /* 헤더 높이 제외 */
 }
 
 .admin-sidebar {
@@ -33,7 +28,6 @@ body {
   max-width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
-  overflow-x: hidden; /* ✅ 추가 */
 }
 
 .page-title {
@@ -59,8 +53,7 @@ body {
   background-color: #f0f4f7;
   border-radius: 8px;
   padding: 20px;
-  width: 100%;            /* ✅ 고정 폭 제거 */
-  max-width: 100%;        /* ✅ 모바일에서도 넘치지 않게 */
+  width: 200px;
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -84,16 +77,6 @@ body {
   width: 100%;
   border-collapse: collapse;
   background-color: #fff;
-  margin-top: 20px;
-  overflow-x: auto;
-  display: block;
-  white-space: nowrap;
-  box-sizing: border-box;
-}
-
-.history-table table {
-  width: 100%;
-  min-width: unset; /* ✅ 모바일에서 튀어나가는 문제 해결 */
 }
 
 .history-table th,
@@ -123,11 +106,11 @@ body {
 
   .admin-content {
     padding: 24px 16px;
+    /* ✅ 좌우 여백 16px 확보 */
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
-    overflow-x: hidden; /* ✅ 보강 */
   }
 
   .summary-section {
@@ -152,12 +135,20 @@ body {
   }
 
   .history-table {
-    padding: 0 4px; /* ✅ 좌우 여백 */
+    width: 100%;
+    overflow-x: auto;
+    display: block;
+    white-space: nowrap;
+    margin-top: 20px;
+    padding: 0 4px;
+    /* ✅ 테이블 자체도 좌우 여백 생기게 */
+    box-sizing: border-box;
   }
 
   .history-table table {
     width: 100%;
-    min-width: unset; /* ✅ 고정 해제 */
+    min-width: 100%;
+    /* ✅ 쪼그라들지 않게 */
   }
 
   .history-table th,
@@ -167,7 +158,6 @@ body {
   }
 }
 
-/* ===== 반응형 - 스마트폰 (480px ↓) ===== */
 @media (max-width: 480px) {
   .admin-content {
     padding: 20px 12px;
@@ -175,16 +165,6 @@ body {
     max-width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
-    overflow-x: hidden; /* ✅ 추가 */
-  }
-
-  .summary-box {
-    font-size: 14px;
-  }
-
-  .settle-button {
-    font-size: 14px;
-    padding: 12px 20px;
   }
 
   .history-table {
@@ -193,12 +173,6 @@ body {
 
   .history-table table {
     width: 100%;
-    min-width: unset; /* ✅ 고정 해제 */
-  }
-
-  .history-table th,
-  .history-table td {
-    font-size: 13px;
-    padding: 10px;
+    min-width: 100%;
   }
 }
