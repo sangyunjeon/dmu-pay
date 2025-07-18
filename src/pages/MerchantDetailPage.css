@@ -24,8 +24,8 @@
   padding: 40px 24px;
   background-color: #fff;
   width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
+  max-width: 1200px; /* ✅ 최대 너비 제한 추가 */
+  margin: 0 auto;     /* ✅ 가운데 정렬로 양쪽 여백 확보 */
   box-sizing: border-box;
 }
 
@@ -76,6 +76,7 @@
   width: 100%;
   border-collapse: collapse;
   background-color: #fff;
+  margin-top: 20px;
 }
 
 .history-table th,
@@ -131,8 +132,8 @@
   }
 
   .history-table {
-    display: block;
     overflow-x: auto;
+    display: block;
     white-space: nowrap;
   }
 
@@ -159,5 +160,15 @@
   .settle-button {
     font-size: 14px;
     padding: 12px 20px;
+  }
+
+  .summary-box {
+    font-size: 14px;
+  }
+
+  .history-table th,
+  .history-table td {
+    font-size: 13px;
+    padding: 8px;
   }
 }
