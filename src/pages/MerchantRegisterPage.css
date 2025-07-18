@@ -15,6 +15,8 @@
   flex: 1;
   padding: 40px;
   background-color: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .breadcrumb {
@@ -24,10 +26,6 @@
 }
 
 /* 폼 스타일 */
-.merchant-form {
-  overflow-x: auto;
-}
-
 .merchant-form fieldset {
   border: 1px solid #ccc;
   padding: 20px;
@@ -41,8 +39,6 @@
 .merchant-form table {
   width: 100%;
   border-collapse: collapse;
-  min-width: 600px;
-  display: block;
 }
 
 .merchant-form th {
@@ -81,28 +77,31 @@
   color: white;
   border: none;
   cursor: pointer;
+  transition: 0.2s;
 }
 
 .btn-wrapper button:hover {
   background-color: #003f87;
 }
 
-/* ✅ 반응형: 태블릿 이하 */
+
 @media (max-width: 768px) {
   .merchant-register-body {
-    flex-direction: column; /* 사이드바와 폼을 위아래로 정렬 */
+    flex-direction: column;
   }
 
   .admin-sidebar {
-    display: none; /* 모바일에서 사이드바 숨김 */
+    display: none;
   }
 
   .merchant-register-content {
     padding: 20px;
+    max-width: 100%;
   }
 
+  .merchant-form table,
   .merchant-form fieldset {
-    padding: 15px;
+    width: 100%;
   }
 
   .merchant-form th,
@@ -121,14 +120,18 @@
     padding: 5px 0 15px;
   }
 
+  .btn-wrapper {
+    text-align: center;
+  }
+
   .btn-wrapper button {
-    width: 100%;
+    width: 90%; 
+    font-size: 15px;
     padding: 12px;
-    font-size: 16px;
   }
 }
 
-/* ✅ 반응형: 작은 모바일 */
+
 @media (max-width: 480px) {
   .breadcrumb {
     font-size: 12px;
@@ -141,5 +144,6 @@
   .btn-wrapper button {
     font-size: 14px;
     padding: 10px;
+    width: 100%;
   }
 }
