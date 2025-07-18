@@ -13,6 +13,7 @@ import MyPage from "./pages/MyPage";
 import MerchantRegisterPage from './pages/MerchantRegisterPage';
 import MerchantEditPage from './pages/MerchantEditPage';
 import MerchantDetailPage from "./pages/MerchantDetailPage";
+import AdminStudentPointPage from './pages/AdminStudentPointPage';
 
 
 function App() {
@@ -45,6 +46,10 @@ function App() {
         <Route path="/admin/merchant/register" element={<MerchantRegisterPage />} />
         <Route path="/admin/merchant/edit/:code" element={<MerchantEditPage />} />
         <Route path="/admin/merchant/detail/:code" element={<MerchantDetailPage />} />
+
+
+        {/*  관리자 - 학생관리 / 포인트 내역 /  */}
+        <Route path="/admin/student/point/:studentId" element={<AdminStudentPointPage />} />
      
 
       </Routes>

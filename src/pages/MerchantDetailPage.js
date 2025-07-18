@@ -17,7 +17,7 @@ function MerchantDetailPage() {
         <div className="admin-content">
           <div className="page-title">
             <h2>가맹점 정보/정산</h2>
-            <p className="breadcrumb">HOME &gt; 가맹점 관리 &gt; 가맹점 정보/정산</p>
+           
           </div>
 
           {/* 요약 정보 박스 */}

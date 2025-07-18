@@ -1,0 +1,53 @@
+.student-info {
+  margin: 20px 0;
+  font-size: 18px;
+}
+
+.filter-bar {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.sort-btn {
+  padding: 6px 12px;
+  background-color: #ccc;
+  border: none;
+  cursor: pointer;
+}
+
+.point-history-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background-color: #fff;
+}
+
+.point-history-table th,
+.point-history-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.text-plus {
+  color: green;
+  font-weight: bold;
+}
+
+.text-minus {
+  color: red;
+  font-weight: bold;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.pagination button {
+  padding: 6px 10px;
+  cursor: pointer;
+}
