@@ -3,13 +3,14 @@
 import React from "react";
 import AdminHeader from "../components/AdminHeader";
 import AdminSidebar from "../components/AdminSidebar";
-import "./AdminMainPage.css"; // 공통 스타일
-import "./MerchantDetailPage.css"; // 이 페이지 전용 스타일
+import "./AdminMainPage.css";
+import "./MerchantDetailPage.css";
 
 function MerchantDetailPage() {
   return (
     <div className="admin-page">
       <AdminHeader />
+
       <div className="admin-container">
         <AdminSidebar />
 
@@ -19,24 +20,28 @@ function MerchantDetailPage() {
             <p className="breadcrumb">HOME &gt; 가맹점 관리 &gt; 가맹점 정보/정산</p>
           </div>
 
-          <div className="summary-boxes">
-            <div className="summary-item">
+          {/* 요약 정보 박스 */}
+          <div className="summary-section">
+            <div className="summary-box">
               <p>누적 포인트</p>
               <h3>950,000P</h3>
             </div>
-            <div className="summary-item">
+            <div className="summary-box">
               <p>주문건</p>
               <h3>50건</h3>
             </div>
-            <div className="summary-item">
+            <div className="summary-box">
               <p>정산금액</p>
               <h3>950,000원</h3>
             </div>
-            <button className="settle-button">정산</button>
+            <div className="summary-button-wrap">
+              <button className="settle-button">정산</button>
+            </div>
           </div>
 
+          {/* 정산 내역 */}
           <div className="settlement-history">
-            <h3>■ 가맹점 정산 내역</h3>
+            <h3 style={{ marginBottom: "10px" }}>■ 가맹점 정산 내역</h3>
             <table className="history-table">
               <thead>
                 <tr>
@@ -69,35 +74,8 @@ function MerchantDetailPage() {
                   <td></td>
                   <td></td>
                 </tr>
-                <tr>
-                  <td>2025.02.01</td>
-                  <td>3,000,000P</td>
-                  <td className="text-success">정산완료</td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>2025.01.01</td>
-                  <td>3,000,000P</td>
-                  <td className="text-danger">정산오류</td>
-                  <td></td>
-                  <td></td>
-                </tr>
               </tbody>
             </table>
-
-            <div className="pagination">
-              <button>&laquo;</button>
-              <button>&lt;</button>
-              <button className="active">1</button>
-              <button>2</button>
-              <button>3</button>
-              <button>4</button>
-              <button>5</button>
-              <button>6</button>
-              <button>&gt;</button>
-              <button>&raquo;</button>
-            </div>
           </div>
         </div>
       </div>

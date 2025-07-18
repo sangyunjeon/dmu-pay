@@ -1,37 +1,72 @@
-.summary-boxes {
+.admin-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+}
+
+.admin-container {
+  display: flex;
+  flex: 1;
+  min-height: calc(100vh - 60px); /* 헤더 높이 제외 */
+}
+
+.admin-content {
+  flex: 1;
+  padding: 40px;
+  background-color: #fff;
+}
+
+.page-title {
+  margin-bottom: 20px;
+}
+
+.breadcrumb {
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+}
+
+.summary-section {
   display: flex;
   align-items: center;
   gap: 40px;
   margin-bottom: 30px;
 }
 
-.summary-item {
-  background: #f9f9f9;
+.summary-box {
+  background-color: #f0f4f7;
+  border-radius: 8px;
   padding: 20px;
   width: 200px;
-  border-radius: 8px;
   text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.summary-button-wrap {
+  margin-left: auto;
 }
 
 .settle-button {
   padding: 15px 30px;
-  background: black;
+  background-color: black;
   color: white;
-  font-size: 18px;
-  margin-left: auto;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
 }
 
 .history-table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
+  background-color: #fff;
 }
 
 .history-table th,
 .history-table td {
   border: 1px solid #ccc;
-  padding: 10px;
+  padding: 12px;
   text-align: center;
 }
 
@@ -41,15 +76,4 @@
 
 .text-danger {
   color: red;
-}
-
-.pagination {
-  margin-top: 20px;
-  text-align: center;
-}
-
-.pagination button {
-  margin: 0 4px;
-  padding: 8px 12px;
-  cursor: pointer;
 }
