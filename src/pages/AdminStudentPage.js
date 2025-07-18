@@ -4,10 +4,12 @@ import React, { useState } from "react";
 import AdminHeader from "../components/AdminHeader";
 import AdminSidebar from "../components/AdminSidebar";
 import "./AdminMainPage.css";
+import { useNavigate } from "react-router-dom";
 
 function AdminStudentPage() {
   const [searchName, setSearchName] = useState("");
   const [searchStudentNumber, setSearchStudentNumber] = useState("");
+  const navigate = useNavigate();
 
   const students = Array.from({ length: 10 }, (_, i) => ({
     id: i + 1,
@@ -69,7 +71,13 @@ function AdminStudentPage() {
                     <td>{s.studentNumber}</td>
                     <td>{s.point.toLocaleString()}P</td>
                     <td>
-                      <button>보기</button>
+                      <button
+                        onClick={() =>
+                          navigate(`/admin/student/point/${s.studentNumber}`)
+                        }
+                      >
+                        보기
+                      </button>
                     </td>
                     <td>
                       <button>수정</button>
