@@ -24,7 +24,7 @@
   padding: 40px 24px;
   background-color: #fff;
   width: 100%;
-  max-width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -55,6 +55,7 @@
   width: 200px;
   text-align: center;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin: 0 auto;
 }
 
 .summary-button-wrap {
@@ -69,11 +70,22 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  width: auto;
 }
 
 /* 정산 내역 테이블 */
 .history-table {
+  margin-top: 20px;
+  overflow-x: auto;
+  display: block;
+  white-space: nowrap;
   width: 100%;
+  box-sizing: border-box;
+}
+
+.history-table table {
+  width: 100%;
+  min-width: 600px;
   border-collapse: collapse;
   background-color: #fff;
 }
@@ -104,7 +116,7 @@
   }
 
   .admin-content {
-    padding: 30px 16px;
+    padding: 24px 16px;
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
@@ -119,6 +131,8 @@
 
   .summary-box {
     width: 100%;
+    max-width: 100%;
+    font-size: 15px;
   }
 
   .summary-button-wrap {
@@ -131,14 +145,12 @@
   }
 
   .history-table {
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
+    padding: 0 4px;
   }
 
   .history-table table {
     width: 100%;
-    min-width: 600px;
+    min-width: 100%;
   }
 }
 
@@ -149,15 +161,34 @@
   }
 
   .admin-content {
-    padding: 16px 12px;
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 auto !important;
+    padding: 20px 12px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
     box-sizing: border-box;
+  }
+
+  .summary-box {
+    font-size: 14px;
   }
 
   .settle-button {
     font-size: 14px;
     padding: 12px 20px;
+  }
+
+  .history-table {
+    padding: 0 2px;
+  }
+
+  .history-table table {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .history-table th,
+  .history-table td {
+    font-size: 13px;
+    padding: 10px;
   }
 }
