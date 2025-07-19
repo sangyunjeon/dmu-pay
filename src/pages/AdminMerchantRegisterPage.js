@@ -4,7 +4,7 @@ import './MerchantRegisterPage.css';
 import AdminHeader from '../components/AdminHeader';
 import AdminSidebar from '../components/AdminSidebar';
 
-function MerchantRegisterPage() {
+function AdminMerchantRegisterPage() {
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
@@ -95,4 +95,4 @@ function MerchantRegisterPage() {
   );
 }
 
-export default MerchantRegisterPage;
+export default AdminMerchantRegisterPage;
