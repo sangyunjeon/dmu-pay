@@ -42,7 +42,7 @@ function MerchantMainPage() {
               <td>박수민</td>
               <td>2025.05.24</td>
               <td><button className="accept-btn">수락</button></td>
-              <td><button className="reject-btn">결제취소</button></td>
+              <td><button className="reject-btn">거절</button></td>
             </tr>
           ))}
         </tbody>
