@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../components/Header';
-import './PointHistoryPage.css';
+import './StudentPointHistoryPage.css';
 import {
   LineChart,
   Line,
@@ -21,7 +21,7 @@ const data = [
   { date: '05.24', 지급: 2000, 사용: 1000 },
 ];
 
-function PointHistoryPage() {
+function StudentPointHistoryPage() {
   return (
     <>
       <Header />
@@ -103,4 +103,4 @@ function PointHistoryPage() {
   );
 }
 
-export default PointHistoryPage;
+export default StudentPointHistoryPage;

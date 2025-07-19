@@ -6,7 +6,7 @@ import MerchantMainPage from "./pages/MerchantMainPage";
 import AdminMainPage from "./pages/AdminMainPage";
 import AdminStudentPage from "./pages/AdminStudentPage";
 import AdminMerchantPage from "./pages/AdminMerchantPage";
-import PointHistoryPage from "./pages/PointHistoryPage";
+import StudentPointHistoryPage from "./pages/StudentPointHistoryPage";
 import RankingPage from "./pages/RankingPage";  
 import MerchantInfoPage from "./pages/MerchantInfoPage";
 import MyPage from "./pages/MyPage";
@@ -34,8 +34,8 @@ function App() {
         <Route path="/merchant" element={<MerchantMainPage />} />
         <Route path="/admin" element={<AdminMainPage />} />
 
-        {/* 서브 페이지들 */}
-        <Route path="/point-history" element={<PointHistoryPage />} />
+        {/* 학생 - 페이지 */}
+        <Route path="/point-history" element={<StudentPointHistoryPage />} />
         <Route path="/ranking" element={<RankingPage />} />
         <Route path="/merchants" element={<MerchantInfoPage />} />
         <Route path="/mypage" element={<MyPage />} />
