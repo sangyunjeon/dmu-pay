@@ -24,6 +24,9 @@ function AdminStudentPage() {
     window.location.href = "https://dmu-pay.netlify.app/";
   };
 
+  const handleEditClick = (studentId) => {
+    navigate("/admin/student/point-edit");
+  };
   return (
     <div className="admin-page">
       <AdminHeader handleLogout={handleLogout} />
@@ -80,7 +83,7 @@ function AdminStudentPage() {
                       </button>
                     </td>
                     <td>
-                      <button>수정</button>
+                      <button onClick={() => handleEditClick(student.id)}>수정</button>
                     </td>
                   </tr>
                 ))}
