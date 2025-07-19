@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; 
-import './MerchantRegisterPage.css';
+import './AdminMerchantRegisterPage.css';
 import AdminHeader from '../components/AdminHeader';
 import AdminSidebar from '../components/AdminSidebar';
 
