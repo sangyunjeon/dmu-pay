@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../components/Header";
-import "./MyPage.css";
+import "./StudentMyPage.css";
 import {
   LineChart,
   Line,
@@ -25,7 +25,7 @@ const data = [
   { month: "12월", 지급: 4000, 사용: -1000 },
 ];
 
-function MyPage() {
+function StudentMyPage() {
   return (
     <>
       <Header />
@@ -84,4 +84,4 @@ function MyPage() {
   );
 }
 
-export default MyPage;
+export default StudentMyPage;

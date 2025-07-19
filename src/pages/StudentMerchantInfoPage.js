@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Header from '../components/Header';
-import './MerchantInfoPage.css';
+import './StudentMerchantInfoPage.css';
 
 const sampleMerchants = [
   { name: '역전우동', category: '음식점', address: '동양미래대학교' },
@@ -13,7 +13,7 @@ const sampleMerchants = [
   { name: '역전우동', category: '음식점', address: '동양미래대학교' },
 ];
 
-function MerchantInfoPage() {
+function StudentMerchantInfoPage() {
   const [searchText, setSearchText] = useState('');
 
   const filtered = sampleMerchants.filter((m) =>
@@ -75,4 +75,4 @@ function MerchantInfoPage() {
   );
 }
 
-export default MerchantInfoPage;
+export default StudentMerchantInfoPage;

@@ -8,8 +8,8 @@ import AdminStudentPage from "./pages/AdminStudentPage";
 import AdminMerchantPage from "./pages/AdminMerchantPage";
 import StudentPointHistoryPage from "./pages/StudentPointHistoryPage";
 import StudentRankingPage from "./pages/StudentRankingPage";  
-import MerchantInfoPage from "./pages/MerchantInfoPage";
-import MyPage from "./pages/MyPage";
+import StudentMerchantInfoPage from "./pages/StudentMerchantInfoPage";
+import StudentMyPage from "./pages/StudentMyPage";
 import AdminMerchantRegisterPage from './pages/AdminMerchantRegisterPage';
 import AdminMerchantEditPage from './pages/AdminMerchantEditPage';
 import AdminMerchantDetailPage from "./pages/AdminMerchantDetailPage";
@@ -37,8 +37,8 @@ function App() {
         {/* 학생 - 페이지 */}
         <Route path="/point-history" element={<StudentPointHistoryPage />} />
         <Route path="/ranking" element={<StudentRankingPage />} />
-        <Route path="/merchants" element={<MerchantInfoPage />} />
-        <Route path="/mypage" element={<MyPage />} />
+        <Route path="/merchants" element={<StudentMerchantInfoPage />} />
+        <Route path="/mypage" element={<StudentMyPage />} />
 
         {/*  관리자 - 학생/가맹점 관리 페이지 */}
         <Route path="/admin/student" element={<AdminStudentPage />} />
