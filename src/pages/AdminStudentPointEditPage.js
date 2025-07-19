@@ -12,11 +12,11 @@ function AdminStudentPointEditPage() {
         <AdminSidebar />
         <div className="main-content">
           <h2>학생 포인트 지급/차감</h2>
-          <p className="breadcrumb">HOME &gt; 학생 관리 &gt; 학생 포인트 지급/차감</p>
+         
 
           {/* 학생 정보 */}
           <section className="student-info">
-            <h3>■ 학생 정보</h3>
+            <h3>학생 정보</h3>
             <table>
               <tbody>
                 <tr>
@@ -33,7 +33,7 @@ function AdminStudentPointEditPage() {
 
           {/* 포인트 지급 */}
           <section className="point-section">
-            <h3>■ 포인트 지급</h3>
+            <h3>포인트 지급</h3>
             <table>
               <tbody>
                 <tr>
@@ -63,7 +63,7 @@ function AdminStudentPointEditPage() {
 
           {/* 포인트 차감 */}
           <section className="point-section">
-            <h3>■ 포인트 차감</h3>
+            <h3>포인트 차감</h3>
             <table>
               <tbody>
                 <tr>
