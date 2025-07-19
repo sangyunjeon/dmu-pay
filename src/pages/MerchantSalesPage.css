@@ -11,7 +11,7 @@
 .sales-tabs {
   display: flex;
   gap: 10px;
-  margin-bottom: 20px;
+  margin: 30px 0 20px;
 }
 
 .sales-tabs button {
