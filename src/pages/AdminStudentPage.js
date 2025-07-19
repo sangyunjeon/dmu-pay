@@ -83,7 +83,7 @@ function AdminStudentPage() {
                       </button>
                     </td>
                     <td>
-                      <button onClick={() => handleEditClick(student.id)}>수정</button>
+                      <button onClick={() => handleEditClick(s.id)}>수정</button>
                     </td>
                   </tr>
                 ))}
