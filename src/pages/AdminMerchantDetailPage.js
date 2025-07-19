@@ -4,9 +4,9 @@ import React from "react";
 import AdminHeader from "../components/AdminHeader";
 import AdminSidebar from "../components/AdminSidebar";
 import "./AdminMainPage.css";
-import "./MerchantDetailPage.css";
+import "./AdminMerchantDetailPage.css";
 
-function MerchantDetailPage() {
+function AdminMerchantDetailPage() {
   return (
     <div className="admin-page">
       <AdminHeader />
@@ -83,4 +83,4 @@ function MerchantDetailPage() {
   );
 }
 
-export default MerchantDetailPage;
+export default AdminMerchantDetailPage;
