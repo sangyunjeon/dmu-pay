@@ -106,7 +106,7 @@
 
   .admin-content {
     padding: 24px 16px;
-    /* ✅ 좌우 여백 16px 확보 */
+  
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
@@ -141,14 +141,14 @@
     white-space: nowrap;
     margin-top: 20px;
     padding: 0 4px;
-    /* ✅ 테이블 자체도 좌우 여백 생기게 */
+  
     box-sizing: border-box;
   }
 
   .history-table table {
     width: 100%;
     min-width: 100%;
-    /* ✅ 쪼그라들지 않게 */
+  
   }
 
   .history-table th,
