@@ -10,7 +10,6 @@
   display: flex;
   flex: 1;
   min-height: calc(100vh - 60px);
-  /* 헤더 높이 제외 */
 }
 
 .admin-sidebar {
@@ -40,7 +39,7 @@
   margin-top: 5px;
 }
 
-/* 요약 박스 */
+/* ===== 요약 박스 ===== */
 .summary-section {
   display: flex;
   align-items: center;
@@ -72,11 +71,12 @@
   cursor: pointer;
 }
 
-/* 정산 내역 테이블 */
+/* ===== 정산 내역 테이블 ===== */
 .history-table {
   width: 100%;
   border-collapse: collapse;
   background-color: #fff;
+  font-size: 16px;
 }
 
 .history-table th,
@@ -94,3 +94,48 @@
   color: red;
 }
 
+/* =====  반응형 추가 ===== */
+@media (max-width: 768px) {
+  .admin-container {
+    flex-direction: column;
+  }
+
+  .admin-sidebar {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .admin-content {
+    padding: 20px 16px;
+  }
+
+  .summary-section {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+  }
+
+  .summary-box {
+    width: 100%;
+  }
+
+  .summary-button-wrap {
+    margin-left: 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .settle-button {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .history-table {
+    font-size: 14px;
+  }
+
+  .history-table th,
+  .history-table td {
+    padding: 8px;
+  }
+}
