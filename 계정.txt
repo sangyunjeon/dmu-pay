@@ -1,0 +1,8 @@
+학생
+jsycd0130/qwert12345
+
+관리자
+admin/qwert12345
+
+가맹점
+merchant01/qwert12345
