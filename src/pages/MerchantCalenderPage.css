@@ -1,90 +1,84 @@
-.calendar-page {
-  padding: 32px;
-  background-color: #f9f9f9;
-  min-height: 100vh;
-  font-family: "Pretendard", sans-serif;
+.merchant-calendar-page {
+  padding: 20px;
+  background-color: #fff;
 }
 
 .calendar-header {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 10px;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 12px;
 }
 
-.month-control {
+.calendar-controls {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 18px;
-  font-weight: bold;
+  gap: 16px;
 }
 
-.month-control button {
-  background: #fff;
-  border: 1px solid #ccc;
-  padding: 4px 10px;
+.calendar-controls button {
+  background-color: #eee;
+  border: none;
   border-radius: 6px;
+  padding: 4px 8px;
   cursor: pointer;
 }
 
-.total-amount {
-  font-size: 18px;
-  font-weight: bold;
+.total-sales {
+  margin-left: auto;
+  font-size: 16px;
 }
 
-.calendar-legend {
-  margin: 10px 0 20px;
+.legend {
+  margin: 8px 0;
   font-size: 14px;
 }
 
-.dot {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  margin-right: 6px;
+.legend .low {
+  color: blue;
+  margin-right: 10px;
 }
 
-.dot.blue {
-  background-color: blue;
-}
-
-.dot.red {
-  background-color: red;
-}
-
-.calendar-box {
-  border: 1px solid #ddd;
-  background: white;
-  border-radius: 10px;
-  overflow-x: auto;
+.legend .high {
+  color: red;
 }
 
 .calendar-table {
   width: 100%;
   border-collapse: collapse;
+}
+
+.calendar-table th {
+  padding: 6px 0;
+  border-bottom: 1px solid #ddd;
   text-align: center;
 }
 
-.calendar-table th,
-.calendar-table td {
-  padding: 12px;
+.calendar-cell {
   height: 80px;
-  border: 1px solid #eee;
+  text-align: right;
+  padding: 6px;
   vertical-align: top;
+  border: 1px solid #eee;
 }
 
-.calendar-table .gray {
-  color: #ccc;
+.date-num {
+  font-size: 14px;
+  color: #333;
 }
 
-.calendar-table .blue {
-  color: blue;
+.sales-amount {
+  font-size: 14px;
+  color: #333;
+  margin-top: 4px;
+}
+
+.sales-amount.high {
+  color: red;
   font-weight: bold;
 }
 
-.calendar-table .red {
-  color: red;
+.sales-amount.low {
+  color: blue;
   font-weight: bold;
 }
