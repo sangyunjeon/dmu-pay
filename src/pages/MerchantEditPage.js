@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import './MerchantRegisterPage.css'; // 기존 스타일 재사용
+import './AdminMerchantRegisterPage.css'; // 기존 스타일 재사용
 import AdminHeader from '../components/AdminHeader';
 import AdminSidebar from '../components/AdminSidebar';
 
