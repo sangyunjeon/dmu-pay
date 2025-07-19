@@ -6,7 +6,7 @@ import './AdminMerchantRegisterPage.css'; // 기존 스타일 재사용
 import AdminHeader from '../components/AdminHeader';
 import AdminSidebar from '../components/AdminSidebar';
 
-function MerchantEditPage() {
+function AdminMerchantEditPage() {
   const { code } = useParams();
   const navigate = useNavigate();
 
@@ -117,4 +117,4 @@ function MerchantEditPage() {
   );
 }
 
-export default MerchantEditPage;
+export default AdminMerchantEditPage;

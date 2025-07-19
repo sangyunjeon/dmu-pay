@@ -6,7 +6,7 @@ import AdminSidebar from '../components/AdminSidebar';
 
 function AdminMerchantRegisterPage() {
   const navigate = useNavigate();
-
+  
   const [formData, setFormData] = useState({
     name: '',
     code: '',
