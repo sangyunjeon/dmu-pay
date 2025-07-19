@@ -103,10 +103,12 @@
   .admin-sidebar {
     width: 100%;
     min-width: 100%;
+    max-height: auto;
+    box-sizing: border-box;
   }
 
   .admin-content {
-    padding: 20px 16px;
+    width: 100%;
   }
 
   .summary-section {
