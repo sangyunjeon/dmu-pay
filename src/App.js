@@ -7,7 +7,7 @@ import AdminMainPage from "./pages/AdminMainPage";
 import AdminStudentPage from "./pages/AdminStudentPage";
 import AdminMerchantPage from "./pages/AdminMerchantPage";
 import StudentPointHistoryPage from "./pages/StudentPointHistoryPage";
-import RankingPage from "./pages/RankingPage";  
+import StudentRankingPage from "./pages/StudentRankingPage";  
 import MerchantInfoPage from "./pages/MerchantInfoPage";
 import MyPage from "./pages/MyPage";
 import AdminMerchantRegisterPage from './pages/AdminMerchantRegisterPage';
@@ -36,7 +36,7 @@ function App() {
 
         {/* 학생 - 페이지 */}
         <Route path="/point-history" element={<StudentPointHistoryPage />} />
-        <Route path="/ranking" element={<RankingPage />} />
+        <Route path="/ranking" element={<StudentRankingPage />} />
         <Route path="/merchants" element={<MerchantInfoPage />} />
         <Route path="/mypage" element={<MyPage />} />
 

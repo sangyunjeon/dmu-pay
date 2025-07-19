@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../components/Header';
-import './RankingPage.css';
+import './StudentRankingPage.css';
 
 const rankingData = [
   { rank: 1, name: '박수민', point: 15000 },
@@ -15,7 +15,7 @@ const rankingData = [
   { rank: 10, name: '000', point: 14991 },
 ];
 
-function RankingPage() {
+function StudentRankingPage() {
   const myRank = 27;
   const totalStudents = 500;
 
@@ -52,4 +52,4 @@ function RankingPage() {
   );
 }
 
-export default RankingPage;
+export default StudentRankingPage;
