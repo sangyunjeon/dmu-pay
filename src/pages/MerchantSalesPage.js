@@ -1,11 +1,22 @@
-// src/pages/MerchantSalesPage.js
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import MerchantHeader from "../components/MerchantHeader";
 import "./MerchantSalesPage.css";
 
 function MerchantSalesPage() {
   const [activeTab, setActiveTab] = useState("today");
   const [salesData, setSalesData] = useState(null);
+  const navigate = useNavigate();
+
+  // 세션에서 가게 이름/사장 이름 불러오기
+  const storeName = sessionStorage.getItem("store_name") || "가게 이름";
+  const owner = sessionStorage.getItem("owner_name") || "000 사장님";
+
+  const handleLogout = () => {
+    sessionStorage.clear();
+    alert("로그아웃 되었습니다.");
+    navigate("/login");
+  };
 
   // 날짜 범위 계산
   const getDateRange = (tab) => {
@@ -48,7 +59,12 @@ function MerchantSalesPage() {
 
   return (
     <div className="merchant-page">
-      <MerchantHeader />
+      {/* ✅ storeName, owner, onLogout props 넘김 */}
+      <MerchantHeader
+        storeName={storeName}
+        owner={owner}
+        onLogout={handleLogout}
+      />
 
       {/* 탭 영역 */}
       <div className="sales-tabs">
