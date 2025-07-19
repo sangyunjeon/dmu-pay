@@ -2,44 +2,21 @@
 import React, { useState, useEffect } from "react";
 import MerchantHeader from "../components/MerchantHeader";
 import "./MerchantSalesPage.css";
+import { useNavigate } from "react-router-dom";
 
 function MerchantSalesPage() {
   const [activeTab, setActiveTab] = useState("today");
   const [salesData, setSalesData] = useState(null);
+  const navigate = useNavigate();
 
-  // 날짜 범위 계산
-  const getDateRange = (tab) => {
-    const today = new Date();
-    if (tab === "today") {
-      return { start: today, end: today };
-    } else if (tab === "week") {
-      const day = today.getDay(); // 0(일)~6(토)
-      const start = new Date(today);
-      start.setDate(today.getDate() - ((day + 6) % 7)); // 월요일
-      const end = new Date(start);
-      end.setDate(start.getDate() + 6); // 일요일
-      return { start, end };
-    } else if (tab === "month") {
-      const start = new Date(today.getFullYear(), today.getMonth(), 1);
-      const end = new Date(today.getFullYear(), today.getMonth() + 1, 0);
-      return { start, end };
-    }
+  const handleLogout = () => {
+    sessionStorage.clear();
+    alert("로그아웃 되었습니다.");
+    navigate("/login");
   };
 
-  // 매출 데이터 불러오기 (모의)
-  const fetchSalesData = (range) => {
-    console.log("요청 날짜 범위:", range);
-    // 실제 fetch 로직에 range.start, range.end 넘겨서 요청하면 됨
-    // 아래는 임시 데이터
-    const mockData = {
-      settlement: "3,200,000",
-      sales: "1,000,000",
-      returns: "-5,000",
-      orders: 50,
-      average: "9,000",
-    };
-    setSalesData(mockData);
-  };
+  // 날짜 범위 계산 ... (생략)
+  // fetchSalesData ... (생략)
 
   useEffect(() => {
     const range = getDateRange(activeTab);
@@ -48,7 +25,12 @@ function MerchantSalesPage() {
 
   return (
     <div className="merchant-page">
-      <MerchantHeader />
+      {/* ✅ onLogout 추가 */}
+      <MerchantHeader
+        storeName="가게 이름"
+        owner="000 사장님"
+        onLogout={handleLogout}
+      />
 
       {/* 탭 영역 */}
       <div className="sales-tabs">
