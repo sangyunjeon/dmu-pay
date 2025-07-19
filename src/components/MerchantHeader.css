@@ -1,25 +1,33 @@
-.merchant-header {
+.merchant-actions {
+  position: relative;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background-color: #055db4;
-  color: white;
-  padding: 15px 30px;
-  font-size: 18px;
 }
 
-.merchant-info span {
-  margin-right: 20px;
-  font-weight: bold;
+.merchant-actions .dropdown {
+  position: relative;
 }
 
-.merchant-actions button {
-  margin-left: 10px;
-  padding: 6px 12px;
+.merchant-actions .dropdown-menu {
+  position: absolute;
+  top: 40px;
+  right: 0;
   background-color: white;
-  color: #055db4;
-  font-weight: bold;
-  border: none;
+  border: 1px solid #ccc;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.15);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 10;
+  min-width: 140px;
+}
+
+.merchant-actions .dropdown-menu li {
+  padding: 10px 15px;
   cursor: pointer;
-  border-radius: 4px;
+  font-size: 14px;
+}
+
+.merchant-actions .dropdown-menu li:hover {
+  background-color: #f0f0f0;
 }
