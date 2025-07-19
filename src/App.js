@@ -10,7 +10,7 @@ import PointHistoryPage from "./pages/PointHistoryPage";
 import RankingPage from "./pages/RankingPage";
 import MerchantInfoPage from "./pages/MerchantInfoPage";
 import MyPage from "./pages/MyPage";
-import MerchantRegisterPage from './pages/MerchantRegisterPage';
+import AdminMerchantRegisterPage from './pages/AdminMerchantRegisterPage';
 import MerchantEditPage from './pages/MerchantEditPage';
 import MerchantDetailPage from "./pages/MerchantDetailPage";
 import AdminStudentPointPage from './pages/AdminStudentPointPage';
@@ -44,7 +44,7 @@ function App() {
         <Route path="/admin/merchant" element={<AdminMerchantPage />} /> {/*  추가 */}
 
         {/*  관리자 - 가맹점 등록 / 수정 /  */}
-        <Route path="/admin/merchant/register" element={<MerchantRegisterPage />} />
+        <Route path="/admin/merchant/register" element={<AdminMerchantRegisterPage />} />
         <Route path="/admin/merchant/edit/:code" element={<MerchantEditPage />} />
         <Route path="/admin/merchant/detail/:code" element={<MerchantDetailPage />} />
 
